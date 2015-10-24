@@ -1,0 +1,49 @@
+@startuml
+package org.itver.x.dao{
+    interface DataAccessObject<E>{
+        +{abstract}persistir(E e) : void
+        +{abstract}salvar(E e) : void
+        +{abstract}actualizar(E e) : void
+        +{abstract}buscarPorId(I id) : E
+        +{abstract}buscarTodos(offset : int, tamanio : int) : List<E>
+    }
+    interface ComentarioDAO
+    interface CarreraDAO
+    interface MaestroDAO
+    interface MateriaDAO
+    interface ReseniaDAO
+    
+    package mysql{
+        abstract class GenericMySQLDAO<E>{
+            -em : EntityManager
+            +persistir(E e) : void
+            +salvar(E e) : void
+            +actualizar(E e) : void
+            +buscarPorId(I id) : E
+            +buscarTodos(offset : int, tamanio : int) : List<E>
+        }
+        class ComentarioMySQLDAO
+        class CarreraMySQLDAO
+        class MaestroMySQLDAO
+        class MateriaMySQLDAO
+        class ReseniaMySQLDAO
+    }
+}
+
+DataAccessObject <|-- GenericMySQLDAO
+DataAccessObject <|-- ComentarioDAO
+DataAccessObject <|-- CarreraDAO
+DataAccessObject <|-- MaestroDAO
+DataAccessObject <|-- MateriaDAO
+DataAccessObject <|-- ReseniaDAO
+GenericMySQLDAO <|-- ComentarioMySQLDAO
+GenericMySQLDAO <|-- CarreraMySQLDAO
+GenericMySQLDAO <|-- MaestroMySQLDAO
+GenericMySQLDAO <|-- MateriaMySQLDAO
+GenericMySQLDAO <|-- ReseniaMySQLDAO
+ComentarioDAO <|-- ComentarioMySQLDAO
+CarreraDAO <|-- CarreraMySQLDAO
+MaestroDAO <|-- MaestroMySQLDAO
+MateriaDAO <|-- MateriaMySQLDAO
+ReseniaDAO <|-- ReseniaMySQLDAO
+@enduml

@@ -1,0 +1,100 @@
+@startuml
+
+title Diagrama de cases de Objetos de Negocios
+package org.itver.x.bo{
+
+    abstract class Entidad<T>{
+        #id : T
+        +getId() : T
+        +setId() : void
+    }
+    class Carrera{
+        -nombre : String
+        -materias : List<Materia>
+        +getMaterias() : List<Materia>
+        +getNombre() : String
+        +setMaterias(materias : List<Materia>) : void
+        +setNombre(nombre : String) : void
+    }
+    class Maestro{
+        -apellidoPaterno : String
+        -apellidoMaterno : String
+        -email : String
+        -comentarios : List<Comentarios>
+        -fechaRegistro : java.util.Date
+        -genero : String
+        -materias : List<Materia>
+        -nombre : String
+        +getApellidoMaterno() : String
+        +getApellidoPaterno() : String
+        +getEmail() : String
+        +getComentarios() : List<Comentario>
+        +getFechaRegistro() : java.util.Date
+        +getGenero() : String
+        +getMaterias() : List<Materia>
+        +getNombre() : String
+        +getPromedioCalificaciones() : double
+        +setApellidoMaterno(apellidoMaterno : String) : void
+        +setApellidoPaterno(apellidoPaterno : String) : void
+        +setEmail(email : String) : void
+        +setComentarios(comentarios : List<Comentario>) : void
+        +setFechaRegistro(fecha : java.util.Date) : void
+        +setGenero(genero : String) : void
+        +setMaterias(materias : List<Materia>) : void
+        +setNombre(nombre : String) : void
+    }
+
+    class Materia{
+        -carreras : List<Carrera>
+        -creditos : char
+        -fechaRegistro : java.util.Date
+        -nombre : String
+        +getCarreras() : List<Carrera>
+        +getCreditos() : char
+        +getFechaRegistro() : java.util.Date
+        +getNombre() : String
+        +setCarreras(carreras : List<Carrera>) : void
+        +setCreditos(creditos : char) : void
+        +setFechaRegistro(fechaRegistro : java.util.Date) : void
+        +setNombre(nombre : String) : void
+    }
+    class Comentario{
+        -calificaciones : int[]
+        -contenido : String
+        -fechaRegistro : java.util.Date
+        -maestro : Maestro
+        -materia : Materia
+        -usuario : String
+        +getCalificacion() : int
+        +getContenido() : String
+        +getFechaRegistro() : java.util.Date
+        +getMaestro() : Maestro
+        +getMateria() : Materia
+        +getPromedioCalificaciones() : double
+        +getUsuario() : String
+        +setCalificacion(calificacion : int) : void
+        +setContenido(comentario : String) : void
+        +setFechaRegistro(fecha : java.util.Date) : void
+        +setMaestro(maestro : Maestro) : void
+        +setMateria(materia : Materia) : void        
+        +setUsuario(usuario : String) : void
+        -validaCalificacion(calificacion : int) : void
+        -validaIndxCalificacion(indx : int) : void
+    }
+    /'
+    'Ocultar métodos o atributos
+    hide methods
+    hide attributes
+    '/
+    'Relaciones
+    Carrera o--o Materia
+    Maestro o--o Materia
+    
+    Maestro o--o Comentario
+    Carrera -up-|> Entidad
+    Comentario -up-|> Entidad
+    Maestro -up-|> Entidad
+    Materia -left-|> Entidad
+}
+
+@enduml
