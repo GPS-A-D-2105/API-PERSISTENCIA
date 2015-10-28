@@ -14,18 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.itver.x.dao.jpa;
+package org.itver.evalpro.dao.jpa;
 
 import java.util.List;
 import javax.persistence.TypedQuery;
-import org.itver.x.dao.MateriaDAO;
-import org.itver.x.dto.Materia;
+import org.itver.evalpro.dao.MateriaDAO;
+import org.itver.evalpro.dto.Materia;
 
 /**
  *
  * @author vrebo
  */
-public class MateriaJPAImpl
+class MateriaJPAImpl
         extends GenericJPAImpl<Materia, Integer>
         implements MateriaDAO {
 

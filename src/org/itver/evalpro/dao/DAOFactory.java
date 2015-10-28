@@ -14,16 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.itver.x.dao;
-
-import java.util.List;
-import org.itver.x.dto.Maestro;
+package org.itver.evalpro.dao;
 
 /**
  *
  * @author vrebo
  */
-public interface MaestroDAO extends DataAccessObject<Maestro, Integer> {
-
-    List<Maestro> buscarPorMateria(Object idMateria);
+public interface DAOFactory {
+    CarreraDAO      getCarreraDAO();
+    ComentarioDAO   getComentarioDAO();
+    MateriaDAO      getMateriaDAO();
+    MaestroDAO      getMaestroDAO();
+    
 }

@@ -14,21 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.itver.x.dao.jpa;
+package org.itver.evalpro.dao;
 
-import org.itver.x.dao.CarreraDAO;
-import org.itver.x.dto.Carrera;
+import java.util.List;
+import org.itver.evalpro.dto.Maestro;
 
 /**
  *
  * @author vrebo
  */
-public class CarreraJPAImpl
-        extends GenericJPAImpl<Carrera, Integer>
-        implements CarreraDAO {
+public interface MaestroDAO extends DataAccessObject<Maestro, Integer> {
 
-    public CarreraJPAImpl() {
-        super(Carrera.class);
-    }
-
+    List<Maestro> buscarPorMateria(Object idMateria);
 }

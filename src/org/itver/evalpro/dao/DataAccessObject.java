@@ -14,16 +14,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.itver.x.dao;
+package org.itver.evalpro.dao;
 
 import java.util.List;
-import org.itver.x.dto.Materia;
 
 /**
  *
  * @author vrebo
  */
-public interface MateriaDAO extends DataAccessObject<Materia, Integer> {
+public interface DataAccessObject<E, Id> {
+
+    boolean persistir(E e);
+
+    boolean actualizar(E e);
+
+    boolean eliminar(E e);
+
+    E buscarPorId(Id id);
+
+    List<E> buscarPorRangos(int offset, int limite);
+
+    List<E> buscarTodos();
+
+    int contar();
     
-    List<Materia> buscarMateriasPorIdCarrera(Object idCarrera);
+    void cerrar();
 }

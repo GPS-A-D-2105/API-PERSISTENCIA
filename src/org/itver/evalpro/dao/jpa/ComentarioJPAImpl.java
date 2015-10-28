@@ -14,29 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.itver.x.dao;
+package org.itver.evalpro.dao.jpa;
 
-import java.util.List;
+import org.itver.evalpro.dao.ComentarioDAO;
+import org.itver.evalpro.dto.Comentario;
 
 /**
  *
  * @author vrebo
  */
-public interface DataAccessObject<E, Id> {
+class ComentarioJPAImpl
+        extends GenericJPAImpl<Comentario, Integer>
+        implements ComentarioDAO {
 
-    boolean persistir(E e);
-
-    boolean actualizar(E e);
-
-    boolean eliminar(E e);
-
-    E buscarPorId(Id id);
-
-    List<E> buscarPorRangos(int offset, int limite);
-
-    List<E> buscarTodos();
-
-    int contar();
-    
-    void cerrar();
+    public ComentarioJPAImpl() {
+        super(Comentario.class);
+    }
 }

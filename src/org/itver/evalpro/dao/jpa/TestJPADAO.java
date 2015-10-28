@@ -14,14 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.itver.x.dao.jpa;
+package org.itver.evalpro.dao.jpa;
 
 import java.util.List;
-import org.itver.x.dao.MaestroDAO;
-import org.itver.x.dao.MateriaDAO;
-import org.itver.x.dto.Carrera;
-import org.itver.x.dto.Maestro;
-import org.itver.x.dto.Materia;
+import org.itver.evalpro.dao.MaestroDAO;
+import org.itver.evalpro.dao.MateriaDAO;
+import org.itver.evalpro.dto.Carrera;
+import org.itver.evalpro.dto.Maestro;
+import org.itver.evalpro.dto.Materia;
 
 /**
  *
@@ -44,6 +44,8 @@ public class TestJPADAO {
         m.cerrar();
         MaestroDAO maestroDAO= new MaestroJPAImpl();
         List<Maestro> maestros = maestroDAO.buscarPorMateria(1);
-        System.out.println(maestros);
+        for (Maestro maestro : maestros) {
+            System.out.println("maestro = " + maestro.getNombre());
+        }        
     }
 }

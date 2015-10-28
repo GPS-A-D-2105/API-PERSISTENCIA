@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.itver.x.dao.jpa;
+package org.itver.evalpro.dao.jpa;
 
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -23,7 +23,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import org.itver.x.dao.DataAccessObject;
+import org.itver.evalpro.dao.DataAccessObject;
 
 /**
  *

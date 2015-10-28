@@ -14,18 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.itver.x.dao.jpa;
+package org.itver.evalpro.dao;
 
-import org.itver.x.dao.ComentarioDAO;
-import org.itver.x.dto.Comentario;
+import java.util.List;
+import org.itver.evalpro.dto.Materia;
 
 /**
  *
  * @author vrebo
  */
-public class ComentarioJPAImpl extends GenericJPAImpl<Comentario, Integer> implements ComentarioDAO {
-
-    public ComentarioJPAImpl() {
-        super(Comentario.class);
-    }
+public interface MateriaDAO extends DataAccessObject<Materia, Integer> {
+    
+    List<Materia> buscarMateriasPorIdCarrera(Object idCarrera);
 }

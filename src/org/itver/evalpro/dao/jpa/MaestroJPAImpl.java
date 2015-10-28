@@ -14,14 +14,33 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.itver.x.dao;
+package org.itver.evalpro.dao.jpa;
 
-import org.itver.x.dto.Comentario;
+import java.util.List;
+import javax.persistence.TypedQuery;
+import org.itver.evalpro.dao.MaestroDAO;
+import org.itver.evalpro.dto.Maestro;
 
 /**
  *
  * @author vrebo
  */
-public interface ComentarioDAO extends DataAccessObject<Comentario, Integer>{
-    
+class MaestroJPAImpl
+        extends GenericJPAImpl<Maestro, Integer>
+        implements MaestroDAO {
+
+    public MaestroJPAImpl() {
+        super(Maestro.class);
+    }
+
+    @Override
+    public List<Maestro> buscarPorMateria(Object idMateria) {
+        TypedQuery<Maestro> query
+                = getEntityManager()
+                        .createNamedQuery("Maestro.findByMateria", Maestro.class);
+        query.setParameter("idMateria", idMateria);
+        List<Maestro> results = query.getResultList();
+        return results;
+    }
+
 }

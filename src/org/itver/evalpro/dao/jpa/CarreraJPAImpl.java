@@ -14,34 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.itver.x.dao.jpa;
+package org.itver.evalpro.dao.jpa;
 
-import java.util.List;
-import javax.persistence.TypedQuery;
-import org.itver.x.dao.MaestroDAO;
-import org.itver.x.dto.Maestro;
-import org.itver.x.dto.Materia;
+import org.itver.evalpro.dao.CarreraDAO;
+import org.itver.evalpro.dto.Carrera;
 
 /**
  *
  * @author vrebo
  */
-public class MaestroJPAImpl
-        extends GenericJPAImpl<Maestro, Integer>
-        implements MaestroDAO {
+public class CarreraJPAImpl
+        extends GenericJPAImpl<Carrera, Integer>
+        implements CarreraDAO {
 
-    public MaestroJPAImpl() {
-        super(Maestro.class);
-    }
-
-    @Override
-    public List<Maestro> buscarPorMateria(Object idMateria) {
-        TypedQuery<Maestro> query
-                = getEntityManager()
-                        .createNamedQuery("Maestro.findByMateria", Maestro.class);
-        query.setParameter("idMateria", idMateria);
-        List<Maestro> results = query.getResultList();
-        return results;
+    public CarreraJPAImpl() {
+        super(Carrera.class);
     }
 
 }

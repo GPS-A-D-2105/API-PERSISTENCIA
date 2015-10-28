@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.itver.x.dto;
+package org.itver.evalpro.dto;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
