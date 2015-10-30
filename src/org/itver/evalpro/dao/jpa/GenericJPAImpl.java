@@ -34,7 +34,7 @@ public class GenericJPAImpl<E, Id> implements DataAccessObject<E, Id> {
     private final Class<E> clase;
     private EntityManagerFactory emf;
     private EntityManager em;
-    private static final String PERSISTENCE_UNIT = "TestPU";
+    private static final String PERSISTENCE_UNIT = "misprofesores";
 
     public GenericJPAImpl(Class<E> clase) {
         this.clase = clase;
@@ -118,7 +118,7 @@ public class GenericJPAImpl<E, Id> implements DataAccessObject<E, Id> {
         return ((Long) q.getSingleResult()).intValue();
     }
 
-    protected EntityManager getEntityManager() {
+    protected final EntityManager getEntityManager() {
         if (emf == null) {
             emf = javax.persistence.Persistence
                     .createEntityManagerFactory(PERSISTENCE_UNIT);
