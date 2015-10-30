@@ -1,0 +1,18 @@
+@startuml
+abstract class GenericJPAImpl<E>{
+    -clase : Class<E>
+    -emf : EntityManagerFactory
+    -em : EntityManager
+    -{static}PERSISTENCE_UNIT : String
+    +persistir(E e) : boolean
+    +actualizar(E e) : boolean
+    +eliminar(E e) : boolean
+    +buscarPorId(Id id) : E
+    +buscarTodos(offset : int, limite : int) : List<E>
+    +buscarPorId(Id id) : E
+    +buscarPorRangos(offset : int, limite : int) : List<E>
+    +buscarTodos() : List<E>
+    +contar() : int
+    +cerrar() : void
+}
+@enduml

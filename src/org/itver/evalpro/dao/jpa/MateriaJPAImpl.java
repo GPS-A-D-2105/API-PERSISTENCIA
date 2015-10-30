@@ -34,7 +34,7 @@ class MateriaJPAImpl
     }
 
     @Override
-    public List<Materia> buscarMateriasPorIdCarrera(Object idCarrera) {
+    public List<Materia> buscarPorCarrera(Object idCarrera) {
         TypedQuery<Materia> query
                 = getEntityManager()
                         .createNamedQuery("Materia.findByIdCarrera", Materia.class);

@@ -14,21 +14,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.itver.evalpro.dao.jpa;
+package org.itver.evalpro.dao;
 
-import org.itver.evalpro.dao.CarreraDAO;
-import org.itver.evalpro.dto.Carrera;
+import org.itver.evalpro.dao.jpa.DAOJPAFactory;
 
 /**
  *
  * @author vrebo
  */
-class CarreraJPAImpl
-        extends GenericJPAImpl<Carrera, Integer>
-        implements CarreraDAO {
+public class AbstractFactory {
 
-    public CarreraJPAImpl() {
-        super(Carrera.class);
+    private AbstractFactory() {
+    }
+
+    public DAOFactory getDAOFactory() {
+        String factoryVendor = "";
+        switch (factoryVendor) {
+            default:
+                return DAOJPAFactory.getInstance();
+        }
     }
 
 }

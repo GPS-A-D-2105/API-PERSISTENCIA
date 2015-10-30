@@ -1,0 +1,26 @@
+@startuml
+interface DataAccessObject<E, Id>{
+        +{abstract}persistir(E e) : boolean
+        +{abstract}actualizar(E e) : boolean
+        +{abstract}eliminar(E e) : boolean
+        +{abstract}buscarPorId(Id id) : E
+        +{abstract}buscarPorRangos(offset : int, limite : int) : List<E>
+        +{abstract}buscarTodos() : List<E>
+        +{abstract}contar() : int
+        +{abstract}cerrar() : void
+    }
+    interface ComentarioDAO
+    interface CarreraDAO
+    interface MaestroDAO{
+        +{abstract} buscarPorMateria(idMateria: Object) : List<Maestro>
+    }
+    interface MateriaDAO{
+        +{abstract} buscarMateriasPorCarrera(idCarrera: Object) : List<Materia>
+    }
+hide empty fields
+hide empty methods
+DataAccessObject <|-left- ComentarioDAO
+DataAccessObject <|-right- CarreraDAO
+DataAccessObject <|-- MaestroDAO
+DataAccessObject <|-up- MateriaDAO
+@enduml

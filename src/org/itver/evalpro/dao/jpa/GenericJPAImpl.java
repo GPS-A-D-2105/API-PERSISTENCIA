@@ -34,7 +34,7 @@ public class GenericJPAImpl<E, Id> implements DataAccessObject<E, Id> {
     private final Class<E> clase;
     private EntityManagerFactory emf;
     private EntityManager em;
-    private final String PERSISTENCE_UNIT = "TestPU";
+    private static final String PERSISTENCE_UNIT = "TestPU";
 
     public GenericJPAImpl(Class<E> clase) {
         this.clase = clase;

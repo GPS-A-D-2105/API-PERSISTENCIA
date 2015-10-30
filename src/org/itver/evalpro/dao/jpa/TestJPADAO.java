@@ -38,7 +38,7 @@ public class TestJPADAO {
 //        carreraDAO.cerrar();
         Carrera c = new Carrera(1);
         MateriaDAO m = new MateriaJPAImpl();
-        List<Materia> resultados = m.buscarMateriasPorIdCarrera(1);
+        List<Materia> resultados = m.buscarPorCarrera(1);
         System.out.println("resultados = " + resultados);
         System.out.printf("Registros en la tabla materia %d\n", m.contar());
         m.cerrar();

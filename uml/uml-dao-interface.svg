@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="175pt" style="width:287px;height:175px;" version="1.1" viewBox="0 0 287 175" width="287pt">
+    <defs>
+        <filter height="300%" id="f1" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <rect fill="#FEFECE" filter="url(#f1)" height="158.6875" style="stroke: #A80036; stroke-width: 1.5;" width="272" x="6" y="8"/>
+        <ellipse cx="72.75" cy="24" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M73.7031,20.6406 L73.7031,27.2969 L75.4219,27.2969 Q76.0313,27.2969 76.2969,27.5313 Q76.5625,27.7656 76.5625,28.1563 Q76.5625,28.5313 76.2969,28.7656 Q76.0313,29 75.4219,29 L70.2813,29 Q69.6719,29 69.4063,28.7656 Q69.1406,28.5313 69.1406,28.1406 Q69.1406,27.7656 69.4063,27.5313 Q69.6719,27.2969 70.2813,27.2969 L72,27.2969 L72,20.6406 L70.2813,20.6406 Q69.6719,20.6406 69.4063,20.4063 Q69.1406,20.1719 69.1406,19.7813 Q69.1406,19.4063 69.4063,19.1719 Q69.6719,18.9375 70.2813,18.9375 L75.4219,18.9375 Q76.0313,18.9375 76.2969,19.1719 Q76.5625,19.4063 76.5625,19.7813 Q76.5625,20.1719 76.2969,20.4063 Q76.0313,20.6406 75.4219,20.6406 L73.7031,20.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="101" x="93.25" y="28.9102">DataAccessObject</text>
+        <rect fill="#FFFFFF" height="17.0938" style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" width="27" x="254" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="25" x="255" y="18.457">E, Id</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="277" y1="40" y2="40"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="277" y1="48" y2="48"/>
+        <ellipse cx="17" cy="60.418" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="114" x="26" y="63.4189">persistir(E e) : boolean</text>
+        <ellipse cx="17" cy="74.2539" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="122" x="26" y="77.2549">actualizar(E e) : boolean</text>
+        <ellipse cx="17" cy="88.0898" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="113" x="26" y="91.0908">eliminar(E e) : boolean</text>
+        <ellipse cx="17" cy="101.9258" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="106" x="26" y="104.9268">buscarPorId(Id id) : E</text>
+        <ellipse cx="17" cy="115.7617" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="246" x="26" y="118.7627">buscarPorRangos(offset : int, limite : int) : List&lt;E&gt;</text>
+        <ellipse cx="17" cy="129.5977" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="120" x="26" y="132.5986">buscarTodos() : List&lt;E&gt;</text>
+        <ellipse cx="17" cy="143.4336" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="60" x="26" y="146.4346">contar() : int</text>
+        <ellipse cx="17" cy="157.2695" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="67" x="26" y="160.2705">cerrar() : void</text>
+    </g>
+</svg>

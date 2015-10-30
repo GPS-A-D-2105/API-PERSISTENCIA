@@ -1,0 +1,61 @@
+@startuml
+interface DataAccessObject<E, Id>{
+    +{abstract}persistir(E e) : boolean
+    +{abstract}actualizar(E e) : boolean
+    +{abstract}eliminar(E e) : boolean
+    +{abstract}buscarPorId(Id id) : E
+    +{abstract}buscarPorRangos(offset : int, limite : int) : List<E>
+    +{abstract}buscarTodos() : List<E>
+    +{abstract}contar() : int
+    +{abstract}cerrar() : void
+}
+interface ComentarioDAO
+interface CarreraDAO
+interface MaestroDAO{
+    +{abstract} buscarPorMateria(idMateria: Object) : List<Maestro>
+}
+interface MateriaDAO{
+    +{abstract} buscarMateriasPorCarrera(idCarrera: Object) : List<Materia>
+}
+
+abstract class GenericJPAImpl<E>{
+    -clase : Class<E>
+    -emf : EntityManagerFactory
+    -em : EntityManager
+    -{static}PERSISTENCE_UNIT : String
+    +persistir(E e) : boolean
+    +actualizar(E e) : boolean
+    +eliminar(E e) : boolean
+    +buscarPorId(Id id) : E
+    +buscarTodos(offset : int, limite : int) : List<E>
+    +buscarPorId(Id id) : E
+    +buscarPorRangos(offset : int, limite : int) : List<E>
+    +buscarTodos() : List<E>
+    +contar() : int
+    +cerrar() : void
+}
+class ComentarioJPAImpl
+class CarreraJPAImpl
+class MaestroJPAImpl{
+    +buscarPorMateria(idMateria: Object) : List<Maestro>
+}
+class MateriaJPAImpl{
+    +buscarMateriasPorCarrera(idCarrera: Object) : List<Materia>
+}
+hide interface
+
+
+DataAccessObject <|-- GenericJPAImpl
+DataAccessObject <|-- ComentarioDAO
+DataAccessObject <|-- CarreraDAO
+DataAccessObject <|-- MaestroDAO
+DataAccessObject <|-- MateriaDAO
+GenericJPAImpl <|-- ComentarioJPAImpl
+GenericJPAImpl <|-- CarreraJPAImpl
+GenericJPAImpl <|-- MaestroJPAImpl
+GenericJPAImpl <|-- MateriaJPAImpl
+ComentarioDAO <|-- ComentarioJPAImpl
+CarreraDAO <|-- CarreraJPAImpl
+MaestroDAO <|-- MaestroJPAImpl
+MateriaDAO <|-- MateriaJPAImpl
+@enduml

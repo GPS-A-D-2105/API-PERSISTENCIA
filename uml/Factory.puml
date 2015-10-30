@@ -1,0 +1,31 @@
+@startuml
+class AbstractFactory{
+    
+    -AbstractFactory()
+    +{static}getDAOFactory() : DAOFactory
+}
+
+interface DAOFactory{
+        +{abstract} getCarreraDAO(): CarreraDAO;
+        +{abstract} getComentarioDAO(): ComentarioDAO;
+        +{abstract} getMateriaDAO(): MateriaDAO;
+        +{abstract} getMaestroDAO(): MaestroDAO;
+}
+
+class DAOJPAFactory {
+            -carreraDAO : CarreraDAO
+            -comentarioDAO : ComentarioDAO
+            -maestroDAO : MaestroDAO
+            -materiaDAO : MateriaDAO
+            -DAOJPAFactory()
+            +{static}getInstance() : DAOFactory
+            +getCarreraDAO(): CarreraDAO;
+            +getComentarioDAO(): ComentarioDAO;
+            +getMateriaDAO(): MateriaDAO;
+            +getMaestroDAO(): MaestroDAO;
+        }
+
+AbstractFactory o-- DAOFactory
+AbstractFactory o-- DAOJPAFactory
+DAOFactory <|-left- DAOJPAFactory
+@enduml

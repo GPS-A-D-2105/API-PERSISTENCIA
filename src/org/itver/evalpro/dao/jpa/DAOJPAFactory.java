@@ -40,7 +40,7 @@ public final class DAOJPAFactory implements DAOFactory{
         materiaDAO      = new MateriaJPAImpl();
     }
 
-    public static DAOJPAFactory getInstance() {
+    public static DAOFactory getInstance() {
         return new DAOJPAFactory();
     }
 
