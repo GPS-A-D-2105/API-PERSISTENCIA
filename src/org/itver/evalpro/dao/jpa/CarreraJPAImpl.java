@@ -16,6 +16,7 @@
  */
 package org.itver.evalpro.dao.jpa;
 
+import java.util.List;
 import org.itver.evalpro.dao.CarreraDAO;
 import org.itver.evalpro.dto.Carrera;
 
@@ -31,4 +32,10 @@ class CarreraJPAImpl
         super(Carrera.class);
     }
 
+    public static void main(String[] args) {
+        List<Carrera> lista = new CarreraJPAImpl().buscarPorRangos(-1, 0);
+        for (Carrera lista1 : lista) {
+            System.out.println(lista1.getId());
+        }
+    }
 }

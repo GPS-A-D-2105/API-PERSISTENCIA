@@ -94,12 +94,18 @@ public class GenericJPAImpl<E, Id> implements DataAccessObject<E, Id> {
 
     @Override
     public List<E> buscarPorRangos(int offset, int limite) {
+        if (offset < 0) {
+            throw new IllegalArgumentException(
+                    String.format("Valor de offset inválido, el valor es negativo (%d)", offset));
+        }
+        if(limite < 0 ){
+            throw new IllegalArgumentException(
+                    String.format("Valor de para limite inválido, el valor es negativo (%d)", offset));
+        }
         CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
         cq.select(cq.from(clase));
         Query q = em.createQuery(cq);
-        q.setMaxResults(limite);
-        q.setFirstResult(offset);
-        return q.getResultList();
+        return q.setFirstResult(offset).getResultList();
     }
 
     @Override

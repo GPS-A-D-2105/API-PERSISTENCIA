@@ -19,7 +19,7 @@ package org.itver.evalpro.dao;
 import java.util.List;
 
 /**
- *
+ * Esta interface define los métodos que 
  * @author vrebo
  */
 public interface DataAccessObject<E, Id> {

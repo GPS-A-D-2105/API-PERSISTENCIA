@@ -48,6 +48,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Comentario extends Entidad<Integer> implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    private static final int DEFAULT_CALIF_SIZE = 3;
 
     private String contenido;
     private Date registro;
@@ -56,15 +57,18 @@ public class Comentario extends Entidad<Integer> implements Serializable {
     private Integer idReseña;
 
     public Comentario() {
+        calificaciones = new int[DEFAULT_CALIF_SIZE];
     }
 
     public Comentario(Integer idComentario) {
         this.id = idComentario;
+        calificaciones = new int[DEFAULT_CALIF_SIZE];
     }
 
     public Comentario(Integer idComentario, String contenido, int califAsist, int califDomi, int califCalid) {
         this.id = idComentario;
         this.contenido = contenido;
+        calificaciones = new int[DEFAULT_CALIF_SIZE];
         calificaciones[0] = califAsist;
         calificaciones[1] = califDomi;
         calificaciones[2] = califCalid;

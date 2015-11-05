@@ -16,20 +16,47 @@
  */
 package org.itver.evalpro.dao.jpa;
 
-import java.util.List;
 import org.itver.evalpro.dao.ComentarioDAO;
-import org.itver.evalpro.dto.Comentario;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
  * @author vrebo
  */
-class ComentarioJPAImpl
-        extends GenericJPAImpl<Comentario, Integer>
-        implements ComentarioDAO {
+public class ComentarioJPAImplTest {
+    
+    public ComentarioJPAImplTest() {
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
+    }
+    
+    @Before
+    public void setUp() {
+    }
+    
+    @After
+    public void tearDown() {
+    }
 
-    public ComentarioJPAImpl() {
-        super(Comentario.class);
+    /**
+     * Test of main method, of class ComentarioJPAImpl.
+     */
+    @Test
+    public void testMain() {
+        System.out.println("main");
+        ComentarioDAO c = new ComentarioJPAImpl();
+        assertNotNull(c.buscarTodos());
     }
     
 }
