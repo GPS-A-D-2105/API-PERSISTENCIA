@@ -29,7 +29,7 @@ import org.itver.evalpro.dao.DataAccessObject;
  *
  * @author vrebo
  */
-public class GenericJPAImpl<E, Id> implements DataAccessObject<E, Id> {
+class GenericJPAImpl<E, Id> implements DataAccessObject<E, Id> {
 
     private final Class<E> clase;
     private EntityManagerFactory emf;

@@ -19,17 +19,28 @@ package org.itver.evalpro.dao;
 import org.itver.evalpro.dao.jpa.DAOJPAFactory;
 
 /**
+ * Clase encargada de crear instancias de las Factorias definidas en la API.
  *
  * @author vrebo
  */
 public class AbstractFactory {
 
+    //Nel, no se puede instancia esta clase.
     private AbstractFactory() {
     }
 
-    public DAOFactory getDAOFactory() {
+    /**
+     * Crea una instancia de DAOFactory configurado para ser usado. Actualmente
+     * la configuración está dentro del mismo método.
+     *
+     * @return Una instancia de DAOFactory.
+     */
+    public static DAOFactory getDAOFactory() {
+        //Variable de configuración de la creación de los DAOFactory's.
         String factoryVendor = "";
         switch (factoryVendor) {
+            //Hasta el momento solo se tiene una clase que implementa la 
+            //interface DAOFactory.
             default:
                 return DAOJPAFactory.getInstance();
         }

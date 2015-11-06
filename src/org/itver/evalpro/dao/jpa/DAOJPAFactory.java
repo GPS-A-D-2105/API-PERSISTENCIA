@@ -23,45 +23,44 @@ import org.itver.evalpro.dao.MaestroDAO;
 import org.itver.evalpro.dao.MateriaDAO;
 
 /**
+ * Clase encargada de crear instancias de los DAOs definidos en la API. No hay
+ * otro método de tener acceso a las implementaciones de los DAOs que a través
+ * de esta clase.
  *
  * @author vrebo
  */
-public final class DAOJPAFactory implements DAOFactory{
+public final class DAOJPAFactory implements DAOFactory {
 
-    private final CarreraJPAImpl    carreraDAO;
-    private final ComentarioJPAImpl comentarioDAO;
-    private final MaestroJPAImpl    maestroDAO;
-    private final MateriaJPAImpl    materiaDAO;
-
+    //No se permite crear instancias de esta clase
     private DAOJPAFactory() {
-        carreraDAO      = new CarreraJPAImpl();
-        comentarioDAO   = new ComentarioJPAImpl();
-        maestroDAO      = new MaestroJPAImpl();
-        materiaDAO      = new MateriaJPAImpl();
     }
 
+    /**
+     * Método estático para la creación de instancias de esta clase.
+     * @return An instance of DAOJPAFactory.
+     */
     public static DAOFactory getInstance() {
         return new DAOJPAFactory();
     }
 
     @Override
     public CarreraDAO getCarreraDAO() {
-        return carreraDAO;
+        return new CarreraJPAImpl();
     }
 
     @Override
     public ComentarioDAO getComentarioDAO() {
-        return comentarioDAO;
+        return new ComentarioJPAImpl();
     }
 
     @Override
     public MaestroDAO getMaestroDAO() {
-        return maestroDAO;
+        return new MaestroJPAImpl();
     }
 
     @Override
     public MateriaDAO getMateriaDAO() {
-        return materiaDAO;
+        return new MateriaJPAImpl();
     }
 
 }

@@ -29,7 +29,7 @@ import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *
+ *  Clase cuyas instancias encapsulan los datos 
  * @author vrebo
  */
 @Entity

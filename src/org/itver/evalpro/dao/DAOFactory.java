@@ -17,13 +17,38 @@
 package org.itver.evalpro.dao;
 
 /**
+ * Interface que define el comportamiento de una Factoría de creación de DAOs.
  *
  * @author vrebo
  */
 public interface DAOFactory {
-    CarreraDAO      getCarreraDAO();
-    ComentarioDAO   getComentarioDAO();
-    MateriaDAO      getMateriaDAO();
-    MaestroDAO      getMaestroDAO();
-    
+
+    /**
+     * Devuelve una instancia de CarreraDAO.
+     *
+     * @return instancia de CarreraDAO
+     */
+    CarreraDAO getCarreraDAO();
+
+    /**
+     * Devuelve una instancia de ComentarioDAO.
+     *
+     * @return instancia de ComentarioDAO.
+     */
+    ComentarioDAO getComentarioDAO();
+
+    /**
+     * Devuelve una instancia de MateriaDAO.
+     *
+     * @return instancia de MateriaDAO
+     */
+    MateriaDAO getMateriaDAO();
+
+    /**
+     * Devuelve una instancia de MaestroDAO.
+     *
+     * @return instancia de MaestroDAO
+     */
+    MaestroDAO getMaestroDAO();
+
 }

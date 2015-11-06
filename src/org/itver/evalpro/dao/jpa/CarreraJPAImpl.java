@@ -31,11 +31,4 @@ class CarreraJPAImpl
     public CarreraJPAImpl() {
         super(Carrera.class);
     }
-
-    public static void main(String[] args) {
-        List<Carrera> lista = new CarreraJPAImpl().buscarPorRangos(-1, 0);
-        for (Carrera lista1 : lista) {
-            System.out.println(lista1.getId());
-        }
-    }
 }

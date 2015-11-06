@@ -53,7 +53,7 @@ public class Comentario extends Entidad<Integer> implements Serializable {
     private String contenido;
     private Date registro;
     private String usuario;
-    private int[] calificaciones;
+    private final int[] calificaciones;
     private Integer idReseña;
 
     public Comentario() {
@@ -61,14 +61,14 @@ public class Comentario extends Entidad<Integer> implements Serializable {
     }
 
     public Comentario(Integer idComentario) {
+        this();
         this.id = idComentario;
-        calificaciones = new int[DEFAULT_CALIF_SIZE];
     }
 
     public Comentario(Integer idComentario, String contenido, int califAsist, int califDomi, int califCalid) {
+        this();
         this.id = idComentario;
         this.contenido = contenido;
-        calificaciones = new int[DEFAULT_CALIF_SIZE];
         calificaciones[0] = califAsist;
         calificaciones[1] = califDomi;
         calificaciones[2] = califCalid;

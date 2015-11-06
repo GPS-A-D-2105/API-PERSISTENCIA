@@ -16,7 +16,6 @@
  */
 package org.itver.evalpro.dao.jpa;
 
-import java.util.List;
 import org.itver.evalpro.dao.ComentarioDAO;
 import org.itver.evalpro.dto.Comentario;
 
@@ -29,7 +28,8 @@ class ComentarioJPAImpl
         implements ComentarioDAO {
 
     public ComentarioJPAImpl() {
-        super(Comentario.class);
+        super(Comentario.class);    
+        
     }
     
 }
