@@ -9,6 +9,8 @@
     <class>org.itver.evalpro.dto.Carrera</class>
     <class>org.itver.evalpro.dto.Materia</class>
     <class>org.itver.evalpro.dto.CarreraMateria</class>
+    <class>org.itver.evalpro.dao.CarreraMateria</class>
+    <class>org.itver.evalpro.dto.Administrador</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/misprofesores"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

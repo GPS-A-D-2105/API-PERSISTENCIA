@@ -16,6 +16,7 @@
  */
 package org.itver.evalpro.dao.jpa;
 
+import org.itver.evalpro.dao.AdministradorDAO;
 import org.itver.evalpro.dao.CarreraDAO;
 import org.itver.evalpro.dao.ComentarioDAO;
 import org.itver.evalpro.dao.DAOFactory;
@@ -61,6 +62,11 @@ public final class DAOJPAFactory implements DAOFactory {
     @Override
     public MateriaDAO getMateriaDAO() {
         return new MateriaJPAImpl();
+    }
+
+    @Override
+    public AdministradorDAO getAdministradorDAO() {
+        return new AdministradorJPAImpl();
     }
 
 }

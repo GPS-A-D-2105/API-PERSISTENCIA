@@ -51,4 +51,9 @@ public interface DAOFactory {
      */
     MaestroDAO getMaestroDAO();
 
+    /**
+     * Devuelve una instancia de AdministradorDAO
+     * @return instancia de AdministradorDAO
+     */
+    AdministradorDAO getAdministradorDAO();
 }

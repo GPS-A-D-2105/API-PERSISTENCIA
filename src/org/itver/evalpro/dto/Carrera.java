@@ -29,7 +29,8 @@ import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *  Clase cuyas instancias encapsulan los datos 
+ * Clase cuyas instancias encapsulan los datos
+ *
  * @author vrebo
  */
 @Entity
@@ -40,6 +41,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Carrera.findByIdCarrera", query = "SELECT c FROM Carrera c WHERE c.id = :idCarrera"),
     @NamedQuery(name = "Carrera.findByNombreCarrera", query = "SELECT c FROM Carrera c WHERE c.nombreCarrera = :nombreCarrera")})
 public class Carrera extends Entidad<Integer> implements Serializable {
+
+    private String iconoUrl;
 
     private static final long serialVersionUID = 1L;
 
@@ -66,7 +69,7 @@ public class Carrera extends Entidad<Integer> implements Serializable {
         return id;
     }
 
-@Basic(optional = false)
+    @Basic(optional = false)
     @Column(name = "nombreCarrera")
     public String getNombreCarrera() {
         return nombreCarrera;
@@ -99,6 +102,15 @@ public class Carrera extends Entidad<Integer> implements Serializable {
     @Override
     public String toString() {
         return "org.itver.x.dto.Carrera[ idCarrera=" + id + " ]";
+    }
+
+    @Column(name = "iconoUrl")
+    public String getIconoUrl() {
+        return iconoUrl;
+    }
+
+    public void setIconoUrl(String iconoUrl) {
+        this.iconoUrl = iconoUrl;
     }
 
 }
