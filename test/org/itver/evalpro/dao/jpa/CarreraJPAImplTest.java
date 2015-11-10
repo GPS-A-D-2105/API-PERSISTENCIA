@@ -30,7 +30,7 @@ import static org.junit.Assert.*;
 public class CarreraJPAImplTest {
     
     public CarreraJPAImplTest() {
-    }
+    }    
     
     @BeforeClass
     public static void setUpClass() {
