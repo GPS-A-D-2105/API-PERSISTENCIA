@@ -18,23 +18,18 @@ package org.itver.evalpro.dto;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -44,12 +39,15 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "materia")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Materia.findAll", query = "SELECT m FROM Materia m"),
+    @NamedQuery(name = "Materia.findAll", query = "SELECT m FROM Materia m ORDER BY m.nombreMateria"),
     @NamedQuery(name = "Materia.findByIdMateria", query = "SELECT m FROM Materia m WHERE m.id = :idMateria"),
     @NamedQuery(name = "Materia.findByNombreMateria", query = "SELECT m FROM Materia m WHERE m.nombreMateria = :nombreMateria"),
     @NamedQuery(name = "Materia.findByRegistro", query = "SELECT m FROM Materia m WHERE m.registro = :registro"),
     @NamedQuery(name = "Materia.findByCreditos", query = "SELECT m FROM Materia m WHERE m.creditos = :creditos"),
-    @NamedQuery(name = "Materia.findByIdCarrera", query = "SELECT m FROM Materia m, CarreraMateria cm WHERE m.id = cm.idMateria AND cm.idCarrera = :idCarrera")})
+    @NamedQuery(name = "Materia.findByIdCarrera", query = "SELECT m FROM Materia m, CarreraMateria cm WHERE m.id = cm.idMateria AND cm.idCarrera = :idCarrera ORDER BY m.nombreMateria"),
+    @NamedQuery(name = "Materia.findByIdMaestro", 
+            query = "SELECT m FROM Materia m, CarreraMateria cm, Maestro ma, Reseña r WHERE ma.id = r.idMaestro AND r.idCarreraMateria = cm.id AND cm.idMateria = m.id AND ma.id = :idMaestro ORDER BY m.nombreMateria")
+})
 public class Materia extends Entidad<Integer> implements Serializable {
 
     private static final long serialVersionUID = 1L;

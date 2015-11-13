@@ -25,5 +25,6 @@ import org.itver.evalpro.dto.Materia;
  */
 public interface MateriaDAO extends DataAccessObject<Materia, Integer> {
     
-    List<Materia> buscarPorCarrera(Object idCarrera);
+    List<Materia> buscarPorCarrera(Object idCarrera);  
+    List<Materia> buscarPorMaestro(Object idMaestro);  
 }

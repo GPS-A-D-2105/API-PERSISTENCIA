@@ -18,23 +18,18 @@ package org.itver.evalpro.dto;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -53,7 +48,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Maestro.findByRegistro", query = "SELECT m FROM Maestro m WHERE m.registro = :registro"),
     @NamedQuery(name = "Maestro.findByG\u00e9nero", query = "SELECT m FROM Maestro m WHERE m.g\u00e9nero = :g\u00e9nero"),
     @NamedQuery(name = "Maestro.findByMateria", 
-            query = "SELECT m FROM Maestro m, CarreraMateria cm, Materia ma, Reseña r WHERE m.id = r.idMaestro AND r.idCarreraMateria = cm.id AND cm.idMateria = :idMateria")
+            query = "SELECT m FROM Maestro m, CarreraMateria cm, Materia ma, Reseña r WHERE m.id = r.idMaestro AND r.idCarreraMateria = cm.id AND cm.idMateria = ma.id AND ma.id = :idMateria")
 })
 public class Maestro extends Entidad<Integer> implements Serializable {
 

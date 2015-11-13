@@ -43,4 +43,26 @@ class MateriaJPAImpl
         return results;
     }
 
+    @Override
+    public List<Materia> buscarTodos() {
+        TypedQuery<Materia> query
+                = getEntityManager()
+                        .createNamedQuery("Materia.findAll", Materia.class);       
+        List<Materia> results = query.getResultList();
+        return results;
+    }
+
+    @Override
+    public List<Materia> buscarPorMaestro(Object idMaestro) {
+        TypedQuery<Materia> query
+                = getEntityManager()
+                        .createNamedQuery("Materia.findByIdMaestro", Materia.class);       
+        query.setParameter("idMaestro", idMaestro);
+        List<Materia> results = query.getResultList();
+        return results;
+    }
+    
+    
+    
+
 }
