@@ -6,21 +6,31 @@
 package org.itver.evalpro.dao.jpa;
 
 import javax.swing.JFrame;
-import javax.swing.UIManager;
+import org.itver.evalpro.dao.DAOFactory;
 
 /**
  *
  * @author Luis Daniel
  */
 public class JUnitPruebas {
-    public static void main(String[] args) {         
+
+    public static void main(String[] args) {       
+       TestProgramingApiBD.pruebasPorProgramacion();
+         
+         
+    }        
+  
+    
+    public void crearVentanaComparaciones() {
         JFrame f = new JFrame("Pruebas Api de Base de datos");
-        MiPanelJUnitPruebas panel = new MiPanelJUnitPruebas();        
-        MiOyenteJUnitPruebas oyente = new MiOyenteJUnitPruebas(panel);          
+        MiPanelJUnitPruebas panel = new MiPanelJUnitPruebas();
+        MiOyenteJUnitPruebas oyente = new MiOyenteJUnitPruebas(panel);
         panel.addEventos(oyente);
         f.setSize(500, 500);
         f.setVisible(true);
         f.add(panel);
     }
-  
+
+   
+
 }
