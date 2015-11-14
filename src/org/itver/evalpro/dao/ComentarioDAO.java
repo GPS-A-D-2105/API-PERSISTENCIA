@@ -16,6 +16,7 @@
  */
 package org.itver.evalpro.dao;
 
+import java.util.List;
 import org.itver.evalpro.dto.Comentario;
 
 /**
@@ -24,4 +25,5 @@ import org.itver.evalpro.dto.Comentario;
  */
 public interface ComentarioDAO extends DataAccessObject<Comentario, Integer>{
     
+    List<Comentario> buscarPorIdMaestro(Object idMaestro);
 }

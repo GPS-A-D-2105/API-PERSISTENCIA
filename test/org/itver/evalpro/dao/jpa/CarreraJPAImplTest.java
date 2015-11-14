@@ -16,6 +16,7 @@
  */
 package org.itver.evalpro.dao.jpa;
 
+import org.itver.evalpro.dto.Carrera;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -50,9 +51,9 @@ public class CarreraJPAImplTest {
     }
 
     @Test
-    public void testSomeMethod() {
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testEliminar() {
+        Carrera carrera = new Carrera(2);
+        assertTrue(new CarreraJPAImpl().eliminar(carrera));
     }
     
     @Test

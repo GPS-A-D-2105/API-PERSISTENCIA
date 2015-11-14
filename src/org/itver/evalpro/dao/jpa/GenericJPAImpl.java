@@ -24,6 +24,7 @@ import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import org.itver.evalpro.dao.DataAccessObject;
+import org.itver.evalpro.dto.Entidad;
 
 /**
  *
@@ -75,6 +76,14 @@ class GenericJPAImpl<E, Id> implements DataAccessObject<E, Id> {
     public boolean eliminar(E e) {
         EntityTransaction et = em.getTransaction();
         et.begin();
+
+        if (!em.contains(e) && em.find(clase, ((Entidad) e).getId()) != null) {
+            e = em.merge(e);
+        } else {
+            et.rollback();
+            return false;
+        }
+
         try {
             em.remove(e);
             et.commit();
@@ -98,7 +107,7 @@ class GenericJPAImpl<E, Id> implements DataAccessObject<E, Id> {
             throw new IllegalArgumentException(
                     String.format("Valor de offset inválido, el valor es negativo (%d)", offset));
         }
-        if(limite < 0 ){
+        if (limite < 0) {
             throw new IllegalArgumentException(
                     String.format("Valor de para limite inválido, el valor es negativo (%d)", offset));
         }
