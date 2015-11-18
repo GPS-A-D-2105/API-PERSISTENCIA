@@ -99,7 +99,7 @@ public class TestProgramingApiBD {
         a.setApeMaterno("Tinoco");        
         a.setNumeroControl("1234");
         a.setCorreo("@hotmail");
-        a.setUserName("senen");
+//        a.setUserName("senen");
         a.setPassword("password");
         dao.getAdministradorDAO().actualizar(a);
     }
@@ -107,7 +107,7 @@ public class TestProgramingApiBD {
        public static void pruebaEliminar(){
         DAOFactory dao = DAOJPAFactory.getInstance();
         Administrador a = new Administrador();
-        a.setUserName("senen");        
+//        a.setUserName("senen");        
         Carrera c = new Carrera();
         c.setId(1);        
         c.setNombreCarrera("Ingenieria en Sistemas Computacionales");

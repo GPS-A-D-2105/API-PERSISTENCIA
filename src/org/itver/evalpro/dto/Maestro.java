@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "maestro")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Maestro.findAll", query = "SELECT m FROM Maestro m"),
+    @NamedQuery(name = "Maestro.findAll", query = "SELECT m FROM Maestro m ORDER BY nombre"),
     @NamedQuery(name = "Maestro.findByIdMaestro", query = "SELECT m FROM Maestro m WHERE m.id = :idMaestro"),
     @NamedQuery(name = "Maestro.findByNombre", query = "SELECT m FROM Maestro m WHERE m.nombre = :nombre"),
     @NamedQuery(name = "Maestro.findByApellidoPaterno", query = "SELECT m FROM Maestro m WHERE m.apellidoPaterno = :apellidoPaterno"),

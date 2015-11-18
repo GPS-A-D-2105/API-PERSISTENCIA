@@ -20,6 +20,7 @@ import java.util.List;
 import javax.persistence.TypedQuery;
 import org.itver.evalpro.dao.MaestroDAO;
 import org.itver.evalpro.dto.Maestro;
+import org.itver.evalpro.dto.Materia;
 
 /**
  *
@@ -39,6 +40,15 @@ class MaestroJPAImpl
                 = getEntityManager()
                         .createNamedQuery("Maestro.findByMateria", Maestro.class);
         query.setParameter("idMateria", idMateria);
+        List<Maestro> results = query.getResultList();
+        return results;
+    }
+    
+    @Override
+    public List<Maestro> buscarTodos() {
+        TypedQuery<Maestro> query
+                = getEntityManager()
+                        .createNamedQuery("Maestro.findAll", Maestro.class);       
         List<Maestro> results = query.getResultList();
         return results;
     }

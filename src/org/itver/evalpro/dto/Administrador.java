@@ -34,52 +34,34 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "administradores")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Administrador.findAll", query = "SELECT a FROM Administrador a"),
+    @NamedQuery(name = "Adminitsrador.findAll", query = "SELECT a FROM Administrador a"),
     @NamedQuery(name = "Administrador.findByIdAdmin", query = "SELECT a FROM Administrador a WHERE a.idAdmin = :idAdmin"),
     @NamedQuery(name = "Administrador.findByNombreAdmin", query = "SELECT a FROM Administrador a WHERE a.nombreAdmin = :nombreAdmin"),
     @NamedQuery(name = "Administrador.findByApePaterno", query = "SELECT a FROM Administrador a WHERE a.apePaterno = :apePaterno"),
     @NamedQuery(name = "Administrador.findByApeMaterno", query = "SELECT a FROM Administrador a WHERE a.apeMaterno = :apeMaterno"),
-    @NamedQuery(name = "Administrador.findByUserName", query = "SELECT a FROM Administrador a WHERE a.userName = :userName"),
     @NamedQuery(name = "Administrador.findByPassword", query = "SELECT a FROM Administrador a WHERE a.password = :password"),
     @NamedQuery(name = "Administrador.findByNumeroControl", query = "SELECT a FROM Administrador a WHERE a.numeroControl = :numeroControl"),
     @NamedQuery(name = "Administrador.findByCorreo", query = "SELECT a FROM Administrador a WHERE a.correo = :correo")})
-public class Administrador implements Serializable {
+public class Administrador extends Entidad<String> implements Serializable {
+
     private static final long serialVersionUID = 1L;
-    @Basic(optional = false)
-    @Column(name = "idAdmin")
     private int idAdmin;
-    @Basic(optional = false)
-    @Column(name = "nombreAdmin")
     private String nombreAdmin;
-    @Basic(optional = false)
-    @Column(name = "ApePaterno")
     private String apePaterno;
-    @Basic(optional = false)
-    @Column(name = "ApeMaterno")
     private String apeMaterno;
-    @Id
-    @Basic(optional = false)
-    @Column(name = "userName")
-    private String userName;
-    @Basic(optional = false)
-    @Column(name = "password")
     private String password;
-    @Basic(optional = false)
-    @Column(name = "numeroControl")
     private String numeroControl;
-    @Basic(optional = false)
-    @Column(name = "correo")
     private String correo;
 
     public Administrador() {
     }
 
     public Administrador(String userName) {
-        this.userName = userName;
+        this.id = userName;
     }
 
     public Administrador(String userName, int idAdmin, String nombreAdmin, String apePaterno, String apeMaterno, String password, String numeroControl, String correo) {
-        this.userName = userName;
+        this.id = userName;
         this.idAdmin = idAdmin;
         this.nombreAdmin = nombreAdmin;
         this.apePaterno = apePaterno;
@@ -89,6 +71,8 @@ public class Administrador implements Serializable {
         this.correo = correo;
     }
 
+    @Basic(optional = false)
+    @Column(name = "idAdmin")
     public int getIdAdmin() {
         return idAdmin;
     }
@@ -97,6 +81,8 @@ public class Administrador implements Serializable {
         this.idAdmin = idAdmin;
     }
 
+    @Basic(optional = false)
+    @Column(name = "nombreAdmin")
     public String getNombreAdmin() {
         return nombreAdmin;
     }
@@ -105,6 +91,8 @@ public class Administrador implements Serializable {
         this.nombreAdmin = nombreAdmin;
     }
 
+    @Basic(optional = false)
+    @Column(name = "ApePaterno")
     public String getApePaterno() {
         return apePaterno;
     }
@@ -113,6 +101,8 @@ public class Administrador implements Serializable {
         this.apePaterno = apePaterno;
     }
 
+    @Basic(optional = false)
+    @Column(name = "ApeMaterno")
     public String getApeMaterno() {
         return apeMaterno;
     }
@@ -121,14 +111,8 @@ public class Administrador implements Serializable {
         this.apeMaterno = apeMaterno;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
+    @Basic(optional = false)
+    @Column(name = "password")
     public String getPassword() {
         return password;
     }
@@ -137,6 +121,8 @@ public class Administrador implements Serializable {
         this.password = password;
     }
 
+    @Basic(optional = false)
+    @Column(name = "numeroControl")
     public String getNumeroControl() {
         return numeroControl;
     }
@@ -145,6 +131,8 @@ public class Administrador implements Serializable {
         this.numeroControl = numeroControl;
     }
 
+    @Basic(optional = false)
+    @Column(name = "correo")
     public String getCorreo() {
         return correo;
     }
@@ -153,29 +141,12 @@ public class Administrador implements Serializable {
         this.correo = correo;
     }
 
+    @Id
+    @Basic(optional = false)
+    @Column(name = "username")
     @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (userName != null ? userName.hashCode() : 0);
-        return hash;
+    public String getId() {
+        return id;
     }
 
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Administrador)) {
-            return false;
-        }
-        Administrador other = (Administrador) object;
-        if ((this.userName == null && other.userName != null) || (this.userName != null && !this.userName.equals(other.userName))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "org.itver.evalpro.dao.Administradores[ userName=" + userName + " ]";
-    }
-    
 }
