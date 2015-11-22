@@ -1,0 +1,434 @@
+Pruebas notNull-------------------------------------------
+Pruebas Numeros negativos********************************
+Pruebas buscaPorRangos***************************************
+www.google.com/sistemas Ingenieria en Sistemas Computacionales
+www.google.com/industrial Ingenieria Industrial
+www.google.com/quimica Ingenieria Quimica
+null INGENIERIA BIOQUIMICA
+null INGENIERIA QUIMICA
+null INGENIERIA MECATRONICA
+null INGENIERIA MECANICA
+null INGENIERIA EN SISTEMAS COMPUTACIONALES
+null INGENIERIA ELECTRICA
+null INGENIERIA ELECTRONICA
+null INGENIERIA INDUSTRIA
+null LIC. ADMINISTRACION
+null INGENIERIA BIOQUIMICA
+null INGENIERIA QUIMICA
+null INGENIERIA MECATRONICA
+null INGENIERIA MECANICA
+null INGENIERIA EN SISTEMAS COMPUTACIONALES
+null INGENIERIA ELECTRICA
+null INGENIERIA ELECTRONICA
+null INGENIERIA INDUSTRIA
+null LIC. ADMINISTRACION
+Anónimo 4
+Senen Tinoco Juarez
+Esteban Trujillo Jimenez
+Patricia Horta Rosado
+Miss Quim ica
+Mister Indus trial
+GRECIA LOPEZ MATEOS
+ABSALON HERNANDEZ CORZO
+ARMANDO MOLINA PEREZ
+JUAN VAZQUEZ VAZQUEZ
+JOSAFAT MENDEZ CORZO
+CRISTOPHER DIAZ  DIAZ
+JULIO  CUELLAR GARCIA
+JAIME ALAMILLO  PACHECO
+FEDERICO VILA  VANAY
+ELSA CORONA  MAYORAL
+SENEN TINOCO JUAREZ
+PATRICIA HORTA ROSADO
+GENARO MENDEZ MENDEZ
+ESTEBAN TRUJILLO  JIMENEZ
+ARMANDO BRAVO BAUTISTA
+CESAR PEREZ PEREZ
+XOCHITL HERNANDEZ SILVA
+HECTOR ANDRADE  ANDRADE
+GRECIA LOPEZ MATEOS
+ABSALON HERNANDEZ CORZO
+ARMANDO MOLINA PEREZ
+JUAN VAZQUEZ VAZQUEZ
+JOSAFAT MENDEZ CORZO
+CRISTOPHER DIAZ  DIAZ
+JULIO  CUELLAR GARCIA
+JAIME ALAMILLO  PACHECO
+FEDERICO VILA  VANAY
+ELSA CORONA  MAYORAL
+SENEN TINOCO JUAREZ
+PATRICIA HORTA ROSADO
+GENARO MENDEZ MENDEZ
+ESTEBAN TRUJILLO  JIMENEZ
+ARMANDO BRAVO BAUTISTA
+CESAR PEREZ PEREZ
+XOCHITL HERNANDEZ SILVA
+HECTOR ANDRADE  ANDRADE
+1 Programacion orientada a objetos 7 null
+2 Graficacion 4 null
+3 Quimica 5 null
+4 Investigacion de operaciones 5 null
+5 Investigacion de operaciones 2 5 null
+6 Quimica avanzada 5 null
+7 FUNDAMENTOS DE INVESTIGACION 4 2015-11-13 16:35:33.0
+8 ELECTRICIDAD Y ELECTRONICA INDUSTRIAL 4 2015-11-13 16:35:33.0
+9 METROLOGIA Y NORMALIZACION 4 2015-11-13 16:35:33.0
+10 PROCESOS DE FABRICACION 4 2015-11-13 16:35:33.0
+11 ADMINISTRACION DE PROYECTOS 3 2015-11-13 16:35:33.0
+12 TALLER DE INVESTIGACION I 4 2015-11-13 16:35:33.0
+13 TALLER DE INVESTIGACION II 4 2015-11-13 16:35:33.0
+14 FORMULACION Y EVALUACION DE PROYECTOS 5 2015-11-13 16:35:33.0
+15 CALCULO DIFERENCIAL 5 2015-11-13 16:35:33.0
+16 CALCULO VECTORIAL 5 2015-11-13 16:35:34.0
+17 CALCULO INTEGRAL 5 2015-11-13 16:35:34.0
+18 ECUACIONES DIFERENCIALES 5 2015-11-13 16:35:34.0
+19 CIRCUITOS ELECTRICOS 5 2015-11-13 16:35:34.0
+20 CONTROL I  5 2015-11-13 16:35:34.0
+21 CONTROL II 5 2015-11-13 16:35:34.0
+22 CONTROL DIGITAL 5 2015-11-13 16:35:34.0
+23 CONTABILIDAD GENERAL 5 2015-11-13 16:35:34.0
+24 FUNCION ADMINISTRATIVA 5 2015-11-13 16:35:34.0
+25 FUNCION ADMINISTRATIVA II 5 2015-11-13 16:35:34.0
+26 ECONOMIA EMPRESARIAL 5 2015-11-13 16:35:34.0
+27 DERECHO FISCAL  4 2015-11-13 16:35:34.0
+28 PRODUCCION 5 2015-11-13 16:35:34.0
+29 PLAN DE NEGOCIOS 5 2015-11-13 16:35:34.0
+30 DESARROLLO ORGANIZACIONAL 5 2015-11-13 16:35:34.0
+31 DIBUJO ASISTIDO POR COMPUTADORA 5 2015-11-13 16:35:34.0
+32 ELECTRICIDAD Y MAGNETISMO 5 2015-11-13 16:35:34.0
+33 QUIMICA ORGANICA I 5 2015-11-13 16:35:34.0
+34 QUIMICA ORGANICA II 5 2015-11-13 16:35:34.0
+35 REACTORES QUIMICOS 5 2015-11-13 16:35:34.0
+36 GRAFICACION 5 2015-11-13 16:35:34.0
+37 PROGRAMACION ORIENTADA A OBJETOS 7 2015-11-13 16:35:34.0
+38 INTELIGENCIA ARTIFICIAL 5 2015-11-13 16:35:34.0
+39 BASE DE DATOS AVANZADAS 3 2015-11-13 16:35:35.0
+40 PROGRAMACION WEB 5 2015-11-13 16:35:35.0
+41 SIMULACION 5 2015-11-13 16:35:35.0
+42 FUNDAMENTOS DE INVESTIGACION 4 2015-11-13 16:36:41.0
+43 ELECTRICIDAD Y ELECTRONICA INDUSTRIAL 4 2015-11-13 16:36:41.0
+44 METROLOGIA Y NORMALIZACION 4 2015-11-13 16:36:41.0
+45 PROCESOS DE FABRICACION 4 2015-11-13 16:36:41.0
+46 ADMINISTRACION DE PROYECTOS 3 2015-11-13 16:36:41.0
+47 TALLER DE INVESTIGACION I 4 2015-11-13 16:36:41.0
+48 TALLER DE INVESTIGACION II 4 2015-11-13 16:36:41.0
+49 FORMULACION Y EVALUACION DE PROYECTOS 5 2015-11-13 16:36:41.0
+50 CALCULO DIFERENCIAL 5 2015-11-13 16:36:41.0
+51 CALCULO VECTORIAL 5 2015-11-13 16:36:41.0
+52 CALCULO INTEGRAL 5 2015-11-13 16:36:41.0
+53 ECUACIONES DIFERENCIALES 5 2015-11-13 16:36:41.0
+54 CIRCUITOS ELECTRICOS 5 2015-11-13 16:36:41.0
+55 CONTROL I  5 2015-11-13 16:36:41.0
+56 CONTROL II 5 2015-11-13 16:36:41.0
+57 CONTROL DIGITAL 5 2015-11-13 16:36:41.0
+58 CONTABILIDAD GENERAL 5 2015-11-13 16:36:41.0
+59 FUNCION ADMINISTRATIVA 5 2015-11-13 16:36:41.0
+60 FUNCION ADMINISTRATIVA II 5 2015-11-13 16:36:41.0
+61 ECONOMIA EMPRESARIAL 5 2015-11-13 16:36:41.0
+62 DERECHO FISCAL  4 2015-11-13 16:36:41.0
+63 PRODUCCION 5 2015-11-13 16:36:41.0
+64 PLAN DE NEGOCIOS 5 2015-11-13 16:36:41.0
+65 DESARROLLO ORGANIZACIONAL 5 2015-11-13 16:36:42.0
+66 DIBUJO ASISTIDO POR COMPUTADORA 5 2015-11-13 16:36:42.0
+67 ELECTRICIDAD Y MAGNETISMO 5 2015-11-13 16:36:42.0
+68 QUIMICA ORGANICA I 5 2015-11-13 16:36:42.0
+69 QUIMICA ORGANICA II 5 2015-11-13 16:36:42.0
+70 REACTORES QUIMICOS 5 2015-11-13 16:36:42.0
+71 GRAFICACION 5 2015-11-13 16:36:42.0
+72 PROGRAMACION ORIENTADA A OBJETOS 7 2015-11-13 16:36:42.0
+73 INTELIGENCIA ARTIFICIAL 5 2015-11-13 16:36:42.0
+74 BASE DE DATOS AVANZADAS 3 2015-11-13 16:36:42.0
+75 PROGRAMACION WEB 5 2015-11-13 16:36:42.0
+76 SIMULACION 5 2015-11-13 16:36:42.0
+Pruebas buscaTodos-------------------------------------------
+www.google.com/sistemas Ingenieria en Sistemas Computacionales
+www.google.com/industrial Ingenieria Industrial
+www.google.com/quimica Ingenieria Quimica
+null INGENIERIA BIOQUIMICA
+null INGENIERIA QUIMICA
+null INGENIERIA MECATRONICA
+null INGENIERIA MECANICA
+null INGENIERIA EN SISTEMAS COMPUTACIONALES
+null INGENIERIA ELECTRICA
+null INGENIERIA ELECTRONICA
+null INGENIERIA INDUSTRIA
+null LIC. ADMINISTRACION
+null INGENIERIA BIOQUIMICA
+null INGENIERIA QUIMICA
+null INGENIERIA MECATRONICA
+null INGENIERIA MECANICA
+null INGENIERIA EN SISTEMAS COMPUTACIONALES
+null INGENIERIA ELECTRICA
+null INGENIERIA ELECTRONICA
+null INGENIERIA INDUSTRIA
+null LIC. ADMINISTRACION
+Anónimo 4
+ABSALON HERNANDEZ CORZO
+ABSALON HERNANDEZ CORZO
+ARMANDO BRAVO BAUTISTA
+ARMANDO MOLINA PEREZ
+ARMANDO MOLINA PEREZ
+ARMANDO BRAVO BAUTISTA
+CESAR PEREZ PEREZ
+CESAR PEREZ PEREZ
+CRISTOPHER DIAZ  DIAZ
+CRISTOPHER DIAZ  DIAZ
+ELSA CORONA  MAYORAL
+ELSA CORONA  MAYORAL
+Esteban Trujillo Jimenez
+ESTEBAN TRUJILLO  JIMENEZ
+ESTEBAN TRUJILLO  JIMENEZ
+FEDERICO VILA  VANAY
+FEDERICO VILA  VANAY
+GENARO MENDEZ MENDEZ
+GENARO MENDEZ MENDEZ
+GRECIA LOPEZ MATEOS
+GRECIA LOPEZ MATEOS
+HECTOR ANDRADE  ANDRADE
+HECTOR ANDRADE  ANDRADE
+JAIME ALAMILLO  PACHECO
+JAIME ALAMILLO  PACHECO
+JOSAFAT MENDEZ CORZO
+JOSAFAT MENDEZ CORZO
+JUAN VAZQUEZ VAZQUEZ
+JUAN VAZQUEZ VAZQUEZ
+JULIO  CUELLAR GARCIA
+JULIO  CUELLAR GARCIA
+Miss Quim ica
+Mister Indus trial
+Patricia Horta Rosado
+PATRICIA HORTA ROSADO
+PATRICIA HORTA ROSADO
+SENEN TINOCO JUAREZ
+SENEN TINOCO JUAREZ
+Senen Tinoco Juarez
+XOCHITL HERNANDEZ SILVA
+XOCHITL HERNANDEZ SILVA
+46 ADMINISTRACION DE PROYECTOS 3 2015-11-13 16:36:41.0
+11 ADMINISTRACION DE PROYECTOS 3 2015-11-13 16:35:33.0
+74 BASE DE DATOS AVANZADAS 3 2015-11-13 16:36:42.0
+39 BASE DE DATOS AVANZADAS 3 2015-11-13 16:35:35.0
+50 CALCULO DIFERENCIAL 5 2015-11-13 16:36:41.0
+15 CALCULO DIFERENCIAL 5 2015-11-13 16:35:33.0
+17 CALCULO INTEGRAL 5 2015-11-13 16:35:34.0
+52 CALCULO INTEGRAL 5 2015-11-13 16:36:41.0
+16 CALCULO VECTORIAL 5 2015-11-13 16:35:34.0
+51 CALCULO VECTORIAL 5 2015-11-13 16:36:41.0
+19 CIRCUITOS ELECTRICOS 5 2015-11-13 16:35:34.0
+54 CIRCUITOS ELECTRICOS 5 2015-11-13 16:36:41.0
+23 CONTABILIDAD GENERAL 5 2015-11-13 16:35:34.0
+58 CONTABILIDAD GENERAL 5 2015-11-13 16:36:41.0
+57 CONTROL DIGITAL 5 2015-11-13 16:36:41.0
+22 CONTROL DIGITAL 5 2015-11-13 16:35:34.0
+55 CONTROL I  5 2015-11-13 16:36:41.0
+20 CONTROL I  5 2015-11-13 16:35:34.0
+56 CONTROL II 5 2015-11-13 16:36:41.0
+21 CONTROL II 5 2015-11-13 16:35:34.0
+27 DERECHO FISCAL  4 2015-11-13 16:35:34.0
+62 DERECHO FISCAL  4 2015-11-13 16:36:41.0
+30 DESARROLLO ORGANIZACIONAL 5 2015-11-13 16:35:34.0
+65 DESARROLLO ORGANIZACIONAL 5 2015-11-13 16:36:42.0
+66 DIBUJO ASISTIDO POR COMPUTADORA 5 2015-11-13 16:36:42.0
+31 DIBUJO ASISTIDO POR COMPUTADORA 5 2015-11-13 16:35:34.0
+61 ECONOMIA EMPRESARIAL 5 2015-11-13 16:36:41.0
+26 ECONOMIA EMPRESARIAL 5 2015-11-13 16:35:34.0
+53 ECUACIONES DIFERENCIALES 5 2015-11-13 16:36:41.0
+18 ECUACIONES DIFERENCIALES 5 2015-11-13 16:35:34.0
+8 ELECTRICIDAD Y ELECTRONICA INDUSTRIAL 4 2015-11-13 16:35:33.0
+43 ELECTRICIDAD Y ELECTRONICA INDUSTRIAL 4 2015-11-13 16:36:41.0
+67 ELECTRICIDAD Y MAGNETISMO 5 2015-11-13 16:36:42.0
+32 ELECTRICIDAD Y MAGNETISMO 5 2015-11-13 16:35:34.0
+49 FORMULACION Y EVALUACION DE PROYECTOS 5 2015-11-13 16:36:41.0
+14 FORMULACION Y EVALUACION DE PROYECTOS 5 2015-11-13 16:35:33.0
+59 FUNCION ADMINISTRATIVA 5 2015-11-13 16:36:41.0
+24 FUNCION ADMINISTRATIVA 5 2015-11-13 16:35:34.0
+60 FUNCION ADMINISTRATIVA II 5 2015-11-13 16:36:41.0
+25 FUNCION ADMINISTRATIVA II 5 2015-11-13 16:35:34.0
+42 FUNDAMENTOS DE INVESTIGACION 4 2015-11-13 16:36:41.0
+7 FUNDAMENTOS DE INVESTIGACION 4 2015-11-13 16:35:33.0
+2 Graficacion 4 null
+71 GRAFICACION 5 2015-11-13 16:36:42.0
+36 GRAFICACION 5 2015-11-13 16:35:34.0
+73 INTELIGENCIA ARTIFICIAL 5 2015-11-13 16:36:42.0
+38 INTELIGENCIA ARTIFICIAL 5 2015-11-13 16:35:34.0
+4 Investigacion de operaciones 5 null
+5 Investigacion de operaciones 2 5 null
+9 METROLOGIA Y NORMALIZACION 4 2015-11-13 16:35:33.0
+44 METROLOGIA Y NORMALIZACION 4 2015-11-13 16:36:41.0
+64 PLAN DE NEGOCIOS 5 2015-11-13 16:36:41.0
+29 PLAN DE NEGOCIOS 5 2015-11-13 16:35:34.0
+10 PROCESOS DE FABRICACION 4 2015-11-13 16:35:33.0
+45 PROCESOS DE FABRICACION 4 2015-11-13 16:36:41.0
+63 PRODUCCION 5 2015-11-13 16:36:41.0
+28 PRODUCCION 5 2015-11-13 16:35:34.0
+1 Programacion orientada a objetos 7 null
+37 PROGRAMACION ORIENTADA A OBJETOS 7 2015-11-13 16:35:34.0
+72 PROGRAMACION ORIENTADA A OBJETOS 7 2015-11-13 16:36:42.0
+40 PROGRAMACION WEB 5 2015-11-13 16:35:35.0
+75 PROGRAMACION WEB 5 2015-11-13 16:36:42.0
+3 Quimica 5 null
+6 Quimica avanzada 5 null
+33 QUIMICA ORGANICA I 5 2015-11-13 16:35:34.0
+68 QUIMICA ORGANICA I 5 2015-11-13 16:36:42.0
+34 QUIMICA ORGANICA II 5 2015-11-13 16:35:34.0
+69 QUIMICA ORGANICA II 5 2015-11-13 16:36:42.0
+35 REACTORES QUIMICOS 5 2015-11-13 16:35:34.0
+70 REACTORES QUIMICOS 5 2015-11-13 16:36:42.0
+41 SIMULACION 5 2015-11-13 16:35:35.0
+76 SIMULACION 5 2015-11-13 16:36:42.0
+47 TALLER DE INVESTIGACION I 4 2015-11-13 16:36:41.0
+12 TALLER DE INVESTIGACION I 4 2015-11-13 16:35:33.0
+48 TALLER DE INVESTIGACION II 4 2015-11-13 16:36:41.0
+13 TALLER DE INVESTIGACION II 4 2015-11-13 16:35:33.0
+Pruebas conteoRegistros-------------------------------------------
+Conteo de los registros de CarreraDAO 21
+Conteo de los registros de ComentarioDAO 1
+Conteo de los registros de MaestroDAO 41
+Conteo de los registros de MateriaDAO 76
+Conteo de los registros de AdministradorDAO 2
+Pruebas buscaPorId-------------------------------------------
+user
+org.itver.x.dto.Carrera[ idCarrera=1 ]
+org.itver.x.dto.Carrera[ idCarrera=2 ]
+org.itver.x.dto.Carrera[ idCarrera=3 ]
+org.itver.x.dto.Carrera[ idCarrera=4 ]
+org.itver.x.dto.Carrera[ idCarrera=5 ]
+org.itver.x.dto.Carrera[ idCarrera=6 ]
+org.itver.x.dto.Carrera[ idCarrera=7 ]
+org.itver.x.dto.Carrera[ idCarrera=8 ]
+org.itver.x.dto.Carrera[ idCarrera=9 ]
+org.itver.x.dto.Carrera[ idCarrera=10 ]
+org.itver.x.dto.Carrera[ idCarrera=11 ]
+org.itver.x.dto.Carrera[ idCarrera=12 ]
+org.itver.x.dto.Carrera[ idCarrera=13 ]
+org.itver.x.dto.Carrera[ idCarrera=14 ]
+org.itver.x.dto.Carrera[ idCarrera=15 ]
+org.itver.x.dto.Carrera[ idCarrera=16 ]
+org.itver.x.dto.Carrera[ idCarrera=17 ]
+org.itver.x.dto.Carrera[ idCarrera=18 ]
+org.itver.x.dto.Carrera[ idCarrera=19 ]
+org.itver.x.dto.Carrera[ idCarrera=20 ]
+org.itver.x.dto.Carrera[ idCarrera=21 ]
+1
+org.itver.x.dto.Maestro[ idMaestro=1 ]
+org.itver.x.dto.Maestro[ idMaestro=2 ]
+org.itver.x.dto.Maestro[ idMaestro=3 ]
+org.itver.x.dto.Maestro[ idMaestro=4 ]
+org.itver.x.dto.Maestro[ idMaestro=5 ]
+org.itver.x.dto.Maestro[ idMaestro=6 ]
+org.itver.x.dto.Maestro[ idMaestro=7 ]
+org.itver.x.dto.Maestro[ idMaestro=8 ]
+org.itver.x.dto.Maestro[ idMaestro=9 ]
+org.itver.x.dto.Maestro[ idMaestro=10 ]
+org.itver.x.dto.Maestro[ idMaestro=11 ]
+org.itver.x.dto.Maestro[ idMaestro=12 ]
+org.itver.x.dto.Maestro[ idMaestro=13 ]
+org.itver.x.dto.Maestro[ idMaestro=14 ]
+org.itver.x.dto.Maestro[ idMaestro=15 ]
+org.itver.x.dto.Maestro[ idMaestro=16 ]
+org.itver.x.dto.Maestro[ idMaestro=17 ]
+org.itver.x.dto.Maestro[ idMaestro=18 ]
+org.itver.x.dto.Maestro[ idMaestro=19 ]
+org.itver.x.dto.Maestro[ idMaestro=20 ]
+org.itver.x.dto.Maestro[ idMaestro=21 ]
+org.itver.x.dto.Maestro[ idMaestro=22 ]
+org.itver.x.dto.Maestro[ idMaestro=23 ]
+org.itver.x.dto.Maestro[ idMaestro=24 ]
+org.itver.x.dto.Maestro[ idMaestro=25 ]
+org.itver.x.dto.Maestro[ idMaestro=26 ]
+org.itver.x.dto.Maestro[ idMaestro=27 ]
+org.itver.x.dto.Maestro[ idMaestro=28 ]
+org.itver.x.dto.Maestro[ idMaestro=29 ]
+org.itver.x.dto.Maestro[ idMaestro=30 ]
+org.itver.x.dto.Maestro[ idMaestro=31 ]
+org.itver.x.dto.Maestro[ idMaestro=32 ]
+org.itver.x.dto.Maestro[ idMaestro=33 ]
+org.itver.x.dto.Maestro[ idMaestro=34 ]
+org.itver.x.dto.Maestro[ idMaestro=35 ]
+org.itver.x.dto.Maestro[ idMaestro=36 ]
+org.itver.x.dto.Maestro[ idMaestro=37 ]
+org.itver.x.dto.Maestro[ idMaestro=38 ]
+org.itver.x.dto.Maestro[ idMaestro=39 ]
+org.itver.x.dto.Maestro[ idMaestro=40 ]
+org.itver.x.dto.Maestro[ idMaestro=41 ]
+org.itver.x.dto.Materia[ idMateria=1 ]
+org.itver.x.dto.Materia[ idMateria=2 ]
+org.itver.x.dto.Materia[ idMateria=3 ]
+org.itver.x.dto.Materia[ idMateria=4 ]
+org.itver.x.dto.Materia[ idMateria=5 ]
+org.itver.x.dto.Materia[ idMateria=6 ]
+org.itver.x.dto.Materia[ idMateria=7 ]
+org.itver.x.dto.Materia[ idMateria=8 ]
+org.itver.x.dto.Materia[ idMateria=9 ]
+org.itver.x.dto.Materia[ idMateria=10 ]
+org.itver.x.dto.Materia[ idMateria=11 ]
+org.itver.x.dto.Materia[ idMateria=12 ]
+org.itver.x.dto.Materia[ idMateria=13 ]
+org.itver.x.dto.Materia[ idMateria=14 ]
+org.itver.x.dto.Materia[ idMateria=15 ]
+org.itver.x.dto.Materia[ idMateria=16 ]
+org.itver.x.dto.Materia[ idMateria=17 ]
+org.itver.x.dto.Materia[ idMateria=18 ]
+org.itver.x.dto.Materia[ idMateria=19 ]
+org.itver.x.dto.Materia[ idMateria=20 ]
+org.itver.x.dto.Materia[ idMateria=21 ]
+org.itver.x.dto.Materia[ idMateria=22 ]
+org.itver.x.dto.Materia[ idMateria=23 ]
+org.itver.x.dto.Materia[ idMateria=24 ]
+org.itver.x.dto.Materia[ idMateria=25 ]
+org.itver.x.dto.Materia[ idMateria=26 ]
+org.itver.x.dto.Materia[ idMateria=27 ]
+org.itver.x.dto.Materia[ idMateria=28 ]
+org.itver.x.dto.Materia[ idMateria=29 ]
+org.itver.x.dto.Materia[ idMateria=30 ]
+org.itver.x.dto.Materia[ idMateria=31 ]
+org.itver.x.dto.Materia[ idMateria=32 ]
+org.itver.x.dto.Materia[ idMateria=33 ]
+org.itver.x.dto.Materia[ idMateria=34 ]
+org.itver.x.dto.Materia[ idMateria=35 ]
+org.itver.x.dto.Materia[ idMateria=36 ]
+org.itver.x.dto.Materia[ idMateria=37 ]
+org.itver.x.dto.Materia[ idMateria=38 ]
+org.itver.x.dto.Materia[ idMateria=39 ]
+org.itver.x.dto.Materia[ idMateria=40 ]
+org.itver.x.dto.Materia[ idMateria=41 ]
+org.itver.x.dto.Materia[ idMateria=42 ]
+org.itver.x.dto.Materia[ idMateria=43 ]
+org.itver.x.dto.Materia[ idMateria=44 ]
+org.itver.x.dto.Materia[ idMateria=45 ]
+org.itver.x.dto.Materia[ idMateria=46 ]
+org.itver.x.dto.Materia[ idMateria=47 ]
+org.itver.x.dto.Materia[ idMateria=48 ]
+org.itver.x.dto.Materia[ idMateria=49 ]
+org.itver.x.dto.Materia[ idMateria=50 ]
+org.itver.x.dto.Materia[ idMateria=51 ]
+org.itver.x.dto.Materia[ idMateria=52 ]
+org.itver.x.dto.Materia[ idMateria=53 ]
+org.itver.x.dto.Materia[ idMateria=54 ]
+org.itver.x.dto.Materia[ idMateria=55 ]
+org.itver.x.dto.Materia[ idMateria=56 ]
+org.itver.x.dto.Materia[ idMateria=57 ]
+org.itver.x.dto.Materia[ idMateria=58 ]
+org.itver.x.dto.Materia[ idMateria=59 ]
+org.itver.x.dto.Materia[ idMateria=60 ]
+org.itver.x.dto.Materia[ idMateria=61 ]
+org.itver.x.dto.Materia[ idMateria=62 ]
+org.itver.x.dto.Materia[ idMateria=63 ]
+org.itver.x.dto.Materia[ idMateria=64 ]
+org.itver.x.dto.Materia[ idMateria=65 ]
+org.itver.x.dto.Materia[ idMateria=66 ]
+org.itver.x.dto.Materia[ idMateria=67 ]
+org.itver.x.dto.Materia[ idMateria=68 ]
+org.itver.x.dto.Materia[ idMateria=69 ]
+org.itver.x.dto.Materia[ idMateria=70 ]
+org.itver.x.dto.Materia[ idMateria=71 ]
+org.itver.x.dto.Materia[ idMateria=72 ]
+org.itver.x.dto.Materia[ idMateria=73 ]
+org.itver.x.dto.Materia[ idMateria=74 ]
+org.itver.x.dto.Materia[ idMateria=75 ]
+org.itver.x.dto.Materia[ idMateria=76 ]
+Pruebas eliminar-------------------------------------------
+true
+true
+Pruebas actualizar*******************************************
+true

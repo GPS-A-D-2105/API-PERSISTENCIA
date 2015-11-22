@@ -14,13 +14,11 @@ import org.itver.evalpro.dao.DAOFactory;
  */
 public class JUnitPruebas {
 
-    public static void main(String[] args) {       
-       TestProgramingApiBD.pruebasPorProgramacion();
-         
-         
-    }        
-  
-    
+    public static void main(String[] args) {
+        TestProgramingApiBD test = new TestProgramingApiBD();
+        test.pruebasPorProgramacion();
+    }
+
     public void crearVentanaComparaciones() {
         JFrame f = new JFrame("Pruebas Api de Base de datos");
         MiPanelJUnitPruebas panel = new MiPanelJUnitPruebas();
@@ -30,7 +28,5 @@ public class JUnitPruebas {
         f.setVisible(true);
         f.add(panel);
     }
-
-   
 
 }

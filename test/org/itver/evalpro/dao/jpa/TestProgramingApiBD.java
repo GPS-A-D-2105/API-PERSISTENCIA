@@ -15,7 +15,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package org.itver.evalpro.dao.jpa;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -29,12 +28,19 @@ import org.itver.evalpro.dto.Maestro;
 import org.itver.evalpro.dto.Materia;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 /**
  *
  * @author Luis Daniel
  */
 public class TestProgramingApiBD {
+
+    private static DAOFactory dao;
+
+    public TestProgramingApiBD() {
+        dao = DAOJPAFactory.getInstance();
+    }
 
     public static void pruebasPorProgramacion() {
         try {
@@ -45,7 +51,7 @@ public class TestProgramingApiBD {
         }
     }
 
-    public static void creaArchivoPruebas(String ruta) {
+    private static void creaArchivoPruebas(String ruta) {
         File file = new File(ruta);
         try {
             FileWriter fw = new FileWriter(file);
@@ -56,92 +62,135 @@ public class TestProgramingApiBD {
             bw.close();
         } catch (Exception e) {
             System.out.println("Error de archivo");
+            e.printStackTrace();
         }
     }
 
-    public static void pruebas(PrintWriter pw) {
-//        notNull();
-//        pruebaNumerosNegativos(pw);
-//        pruebaBuscaPorRangos(pw);
-//        pruebaBuscaTodos(pw);
-//        conteoRegistos(pw); //12-16
-//        pruebaBuscaPorId(pw);
-//        pruebaActualizar();
-        pruebaEliminar();
+    private static void pruebas(PrintWriter pw) {
+        notNull(pw);
+        pruebaNumerosNegativos(pw);
+        pruebaBuscaPorRangos(pw);
+        pruebaBuscaTodos(pw);
+        conteoRegistos(pw); //12-16
+        pruebaBuscaPorId(pw);
+        pruebaEliminar(pw);
+        pruebaPersistir(pw);
+        pruebaActualizar(pw);
     }
 
-    public static void pruebaNumerosNegativos(PrintWriter pw) {
-        DAOFactory dao = DAOJPAFactory.getInstance();
+    private static void pruebaNumerosNegativos(PrintWriter pw) {
         //1            
         try {
             dao.getCarreraDAO().buscarPorRangos(-1, -1);
         } catch (IllegalArgumentException e) {
-            pw.append("Numeros negativos");
+            pw.append("Pruebas Numeros negativos********************************");
             System.out.println("Numeros negativos");
             pw.println();
         }
     }
 
-    public static void pruebaBuscaPorRangos(PrintWriter pw) {
-        DAOFactory dao = DAOJPAFactory.getInstance();
+    private static void pruebaBuscaPorRangos(PrintWriter pw) {
+        pw.append("Pruebas buscaPorRangos***************************************");
+        pw.println();
         recorrerListaCarrera(dao.getCarreraDAO().buscarPorRangos(0, 1), pw); //2
         recorrerListaComentario(dao.getComentarioDAO().buscarPorRangos(0, 1), pw); //3
         recorrerListaMaestro(dao.getMaestroDAO().buscarPorRangos(0, 1), pw); //9
-        recorrerListaMateria(dao.getMateriaDAO().buscarPorRangos(0, 1), pw); //10        
+        recorrerListaMateria(dao.getMateriaDAO().buscarPorRangos(0, 1), pw); //10                
     }
 
-    public static void pruebaActualizar(){
-        DAOFactory dao = DAOJPAFactory.getInstance();
+    private static void pruebaActualizar(PrintWriter pw) {
+        boolean bandera;
+        pw.append("Pruebas actualizar*******************************************");
+        pw.println();
         Administrador a = new Administrador();
-        a.setIdAdmin(1);
-        a.setNombreAdmin("Senen 2");
-        a.setApePaterno("Juarez");
-        a.setApeMaterno("Tinoco");        
-        a.setNumeroControl("1234");
-        a.setCorreo("@hotmail");
-//        a.setUserName("senen");
-        a.setPassword("password");
-        dao.getAdministradorDAO().actualizar(a);
+        a.setIdAdmin(2);
+        a.setNombreAdmin("Nombre Amin Act");
+        a.setApePaterno("Paterno Act");
+        a.setApeMaterno("Materno Act");
+        a.setId("username");
+        a.setPassword("password_1 Act");
+        a.setNumeroControl("E1XXXXXXX Act");
+        a.setCorreo("correo@gmail.com Act");        
+        bandera = dao.getAdministradorDAO().actualizar(a);
+        assertTrue(bandera);
+        pw.append(""+bandera);
+        pw.println();
     }
-         
-       public static void pruebaEliminar(){
-        DAOFactory dao = DAOJPAFactory.getInstance();
+
+    private static void pruebaEliminar(PrintWriter pw) {
+        boolean bandera;
+        pw.append("Pruebas eliminar*********************************************");
+        pw.println();
         Administrador a = new Administrador();
-//        a.setUserName("senen");        
-        Carrera c = new Carrera();
-        c.setId(1);        
-        c.setNombreCarrera("Ingenieria en Sistemas Computacionales");
-        c.setIconoUrl("www.google.com/sistemas");
-        System.out.println(dao.getCarreraDAO().eliminar(c));
+        a.setId("username");
+        bandera = dao.getAdministradorDAO().eliminar(a);
+        assertTrue(bandera);
+        pw.append(""+bandera);
+        pw.println();
     }
-    
-    public static void pruebaBuscaPorId(PrintWriter pw) {
-        DAOFactory dao = DAOJPAFactory.getInstance();
-        assertNotNull(dao.getAdministradorDAO().buscarPorId("Senen").getApeMaterno());
+
+    private static void pruebaPersistir(PrintWriter pw) {
+        boolean bandera;
+        Administrador a = new Administrador();
+        a.setIdAdmin(2);
+        a.setNombreAdmin("Nombre Amin");
+        a.setApePaterno("Paterno");
+        a.setApeMaterno("Materno");
+        a.setId("username");
+        a.setPassword("password_1");
+        a.setNumeroControl("E1XXXXXXX");
+        a.setCorreo("correo@gmail.com");
+        bandera = dao.getAdministradorDAO().persistir(a);
+        assertTrue(bandera);
+        pw.append(""+bandera);
+        pw.println();
+    }
+
+    private static void pruebaBuscaPorId(PrintWriter pw) {        
+        pw.append("Pruebas buscaPorId*******************************************");
+        pw.println();
+        assertNotNull(dao.getAdministradorDAO().buscarPorId("user").getId());
+        pw.append(dao.getAdministradorDAO().buscarPorId("user").getId());
+        pw.println();
+
         for (int i = 1; i <= dao.getCarreraDAO().buscarTodos().size(); i++) {
             assertNotNull(dao.getCarreraDAO().buscarPorId(i));
+            pw.append("" + dao.getCarreraDAO().buscarPorId(i));
+            pw.println();
         }
+
         for (int i = 1; i <= dao.getComentarioDAO().buscarTodos().size(); i++) {
             assertNotNull(dao.getComentarioDAO().buscarPorId(i));
+            pw.append("" + dao.getComentarioDAO().buscarPorId(i).getId());
+            pw.println();
         }
+
         for (int i = 1; i <= dao.getMaestroDAO().buscarTodos().size(); i++) {
             assertNotNull(dao.getMaestroDAO().buscarPorId(i));
+            pw.append("" + dao.getMaestroDAO().buscarPorId(i));
+            pw.println();
         }
+
         for (int i = 1; i <= dao.getMateriaDAO().buscarTodos().size(); i++) {
             assertNotNull(dao.getMateriaDAO().buscarPorId(i));
+            pw.append("" + dao.getMateriaDAO().buscarPorId(i));
+            pw.println();
         }
+
     }
 
-    public static void pruebaBuscaTodos(PrintWriter pw) {
-        DAOFactory dao = DAOJPAFactory.getInstance();
-        recorrerListaCarrera(dao.getCarreraDAO().buscarTodos(), pw); //7
-        recorrerListaComentario(dao.getComentarioDAO().buscarTodos(), pw); //8
-        recorrerListaMaestro(dao.getMaestroDAO().buscarTodos(), pw);
-        recorrerListaMateria(dao.getMateriaDAO().buscarTodos(), pw);
+    private static void pruebaBuscaTodos(PrintWriter pw) {
+        pw.append("Pruebas buscaTodos*******************************************");
+        pw.println();
+        recorrerListaCarrera(dao.getCarreraDAO().buscarTodos(), pw); //7      
+        recorrerListaComentario(dao.getComentarioDAO().buscarTodos(), pw); //8       
+        recorrerListaMaestro(dao.getMaestroDAO().buscarTodos(), pw);      
+        recorrerListaMateria(dao.getMateriaDAO().buscarTodos(), pw);      
     }
 
-    public static void notNull() { //Diferente de listas vacias 16-22
-        DAOFactory dao = DAOJPAFactory.getInstance();
+    private static void notNull(PrintWriter pw) { //Diferente de listas vacias 16-22        
+        pw.append("Pruebas notNull**********************************************");
+        pw.println();
         assertFalse(dao.getCarreraDAO().buscarPorRangos(0, 1).isEmpty());
         assertFalse(dao.getMateriaDAO().buscarPorRangos(0, 1).isEmpty());
         assertFalse(dao.getMaestroDAO().buscarPorRangos(0, 1).isEmpty());
@@ -149,8 +198,9 @@ public class TestProgramingApiBD {
         assertFalse(dao.getAdministradorDAO().buscarPorRangos(0, 1).isEmpty());
     }
 
-    public static void conteoRegistos(PrintWriter pw) {
-        DAOFactory dao = DAOJPAFactory.getInstance();
+    private static void conteoRegistos(PrintWriter pw) {
+        pw.append("Pruebas conteoRegistros**************************************");
+        pw.println();
         pw.append("Conteo de los registros de CarreraDAO " + dao.getCarreraDAO().contar()); //12            
         pw.println();
         pw.append("Conteo de los registros de ComentarioDAO " + dao.getComentarioDAO().contar()); //13
@@ -163,7 +213,7 @@ public class TestProgramingApiBD {
         pw.println();
     }
 
-    public static void recorrerListaCarrera(List<Carrera> lista, PrintWriter pw) {
+    private static void recorrerListaCarrera(List<Carrera> lista, PrintWriter pw) {
         for (int i = 0; i < lista.size(); i++) {
             pw.append(lista.get(i).getIconoUrl() + " " + lista.get(i).getNombreCarrera());
             System.out.println(lista.get(i).toString());
@@ -171,7 +221,7 @@ public class TestProgramingApiBD {
         }
     }
 
-    public static void recorrerListaComentario(List<Comentario> lista, PrintWriter pw) {
+    private static void recorrerListaComentario(List<Comentario> lista, PrintWriter pw) {
         for (int i = 0; i < lista.size(); i++) {
             pw.append(lista.get(i).getUsuario() + " " + lista.get(i).getContenido());
             System.out.println(lista.get(i).toString());
@@ -179,7 +229,7 @@ public class TestProgramingApiBD {
         }
     }
 
-    public static void recorrerListaMaestro(List<Maestro> lista, PrintWriter pw) {
+    private static void recorrerListaMaestro(List<Maestro> lista, PrintWriter pw) {
         for (int i = 0; i < lista.size(); i++) {
             pw.append(lista.get(i).getNombre() + " " + lista.get(i).getApellidoPaterno() + " "
                     + lista.get(i).getApellidoMaterno());
@@ -188,7 +238,7 @@ public class TestProgramingApiBD {
         }
     }
 
-    public static void recorrerListaMateria(List<Materia> lista, PrintWriter pw) {
+    private static void recorrerListaMateria(List<Materia> lista, PrintWriter pw) {
         for (int i = 0; i < lista.size(); i++) {
             pw.append(lista.get(i).getId() + " " + lista.get(i).getNombreMateria() + " " + lista.get(i).getCreditos()
                     + " " + lista.get(i).getRegistro());
