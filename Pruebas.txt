@@ -1,4 +1,4 @@
-Pruebas notNull-------------------------------------------
+Pruebas notNull**********************************************
 Pruebas Numeros negativos********************************
 Pruebas buscaPorRangos***************************************
 www.google.com/sistemas Ingenieria en Sistemas Computacionales
@@ -140,7 +140,7 @@ HECTOR ANDRADE  ANDRADE
 74 BASE DE DATOS AVANZADAS 3 2015-11-13 16:36:42.0
 75 PROGRAMACION WEB 5 2015-11-13 16:36:42.0
 76 SIMULACION 5 2015-11-13 16:36:42.0
-Pruebas buscaTodos-------------------------------------------
+Pruebas buscaTodos*******************************************
 www.google.com/sistemas Ingenieria en Sistemas Computacionales
 www.google.com/industrial Ingenieria Industrial
 www.google.com/quimica Ingenieria Quimica
@@ -280,13 +280,13 @@ XOCHITL HERNANDEZ SILVA
 12 TALLER DE INVESTIGACION I 4 2015-11-13 16:35:33.0
 48 TALLER DE INVESTIGACION II 4 2015-11-13 16:36:41.0
 13 TALLER DE INVESTIGACION II 4 2015-11-13 16:35:33.0
-Pruebas conteoRegistros-------------------------------------------
+Pruebas conteoRegistros**************************************
 Conteo de los registros de CarreraDAO 21
 Conteo de los registros de ComentarioDAO 1
 Conteo de los registros de MaestroDAO 41
 Conteo de los registros de MateriaDAO 76
 Conteo de los registros de AdministradorDAO 2
-Pruebas buscaPorId-------------------------------------------
+Pruebas buscaPorId*******************************************
 user
 org.itver.x.dto.Carrera[ idCarrera=1 ]
 org.itver.x.dto.Carrera[ idCarrera=2 ]
@@ -427,7 +427,7 @@ org.itver.x.dto.Materia[ idMateria=73 ]
 org.itver.x.dto.Materia[ idMateria=74 ]
 org.itver.x.dto.Materia[ idMateria=75 ]
 org.itver.x.dto.Materia[ idMateria=76 ]
-Pruebas eliminar-------------------------------------------
+Pruebas eliminar*********************************************
 true
 true
 Pruebas actualizar*******************************************
