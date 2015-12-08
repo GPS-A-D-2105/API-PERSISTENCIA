@@ -83,7 +83,7 @@ public class TestProgramingApiBD {
         try {
             dao.getCarreraDAO().buscarPorRangos(-1, -1);
         } catch (IllegalArgumentException e) {
-            pw.append("Pruebas Numeros negativos********************************");
+            pw.append("pruebasNumerosNegativos");
             System.out.println("Numeros negativos");
             pw.println();
         }
@@ -149,8 +149,8 @@ public class TestProgramingApiBD {
     private static void pruebaBuscaPorId(PrintWriter pw) {        
         pw.append("Pruebas buscaPorId*******************************************");
         pw.println();
-        assertNotNull(dao.getAdministradorDAO().buscarPorId("user").getId());
-        pw.append(dao.getAdministradorDAO().buscarPorId("user").getId());
+//        assertNotNull(dao.getAdministradorDAO().buscarPorId("username").getId());
+        pw.append(dao.getAdministradorDAO().buscarPorId("username").getId());
         pw.println();
 
         for (int i = 1; i <= dao.getCarreraDAO().buscarTodos().size(); i++) {

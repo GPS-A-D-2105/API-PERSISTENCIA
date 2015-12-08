@@ -23,7 +23,7 @@ public class MiPanelJUnitPruebas extends javax.swing.JPanel {
         modeloTabla = new DefaultTableModel();
         modeloLista = new DefaultListModel();
         jTableResultados.setModel(modeloTabla);
-        jListExcepciones.setModel(modeloLista);
+        
     }
     
     
@@ -43,8 +43,6 @@ public class MiPanelJUnitPruebas extends javax.swing.JPanel {
         botonTesting = new javax.swing.JButton();
         botonSalir = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jScrollPaneExcepciones = new javax.swing.JScrollPane();
-        jListExcepciones = new javax.swing.JList();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -52,15 +50,23 @@ public class MiPanelJUnitPruebas extends javax.swing.JPanel {
 
         jTableResultados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null},
+                {null},
+                {null},
+                {null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jScrollPaneResultados.setViewportView(jTableResultados);
 
         jPanelC.add(jScrollPaneResultados, java.awt.BorderLayout.CENTER);
@@ -87,11 +93,6 @@ public class MiPanelJUnitPruebas extends javax.swing.JPanel {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
         jPanel1.setLayout(new java.awt.BorderLayout());
-
-        jScrollPaneExcepciones.setViewportView(jListExcepciones);
-
-        jPanel1.add(jScrollPaneExcepciones, java.awt.BorderLayout.CENTER);
-
         add(jPanel1, java.awt.BorderLayout.SOUTH);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -107,11 +108,9 @@ public class MiPanelJUnitPruebas extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonSalir;
     private javax.swing.JButton botonTesting;
-    private javax.swing.JList jListExcepciones;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelC;
     private javax.swing.JPanel jPanelN;
-    private javax.swing.JScrollPane jScrollPaneExcepciones;
     private javax.swing.JScrollPane jScrollPaneResultados;
     private javax.swing.JTable jTableResultados;
     // End of variables declaration//GEN-END:variables

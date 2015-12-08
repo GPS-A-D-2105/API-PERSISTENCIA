@@ -9,24 +9,25 @@ import java.awt.event.ActionListener;
  */
 public class MiOyenteJUnitPruebas implements ActionListener {
 
-    private MiPanelJUnitPruebas panel;    
+    private MiPanelJUnitPruebas panel;
 
     public MiOyenteJUnitPruebas(MiPanelJUnitPruebas panel) {
-        this.panel = panel;        
+        this.panel = panel;
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        String etiqueta = e.getActionCommand();        
-        if (etiqueta.equals("Testing")) {                                         
-            TestJunitApiBD pruebas = new TestJunitApiBD();            
+        String etiqueta = e.getActionCommand();
+        if (etiqueta.equals("Testing")) {
+            TestProgramingApiBD test = new TestProgramingApiBD();
+            test.pruebasPorProgramacion();
+            ReportePruebas reporte = new ReportePruebas();
             panel.getModeloLista().clear();
-            panel.getModeloTabla().setDataVector(pruebas.llenarFilas(),pruebas.llenarColumnas());
-            panel.getModeloLista().addElement(TestRunnerApiBD.listaExcepciones());            
-            panel.getModeloTabla().fireTableDataChanged();            
+            panel.getModeloTabla().setDataVector(reporte.llenarFilas(), reporte.llenarColumnas());        
+            panel.getModeloTabla().fireTableDataChanged();
         } else {
             System.exit(0);
         }
     }
-   
+
 }
