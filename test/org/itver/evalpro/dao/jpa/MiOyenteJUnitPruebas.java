@@ -2,9 +2,6 @@ package org.itver.evalpro.dao.jpa;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
 
 /**
  *
